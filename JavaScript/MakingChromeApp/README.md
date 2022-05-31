@@ -16,3 +16,11 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 3. JS is already in Every machine (unlike Python)
 4. Framework: React Native, Electron, socket.io
 5. You can do A lot of things with JS: make a website, backend, chat, desktop app, machine learning
+
+# 2 Welcome to JavaScript
+
+# 3 Javascript on Browser
+## 3.0 The Document Object
+* A browser has a **document** object
+* We can call HTML tag from JS environment through an access to document object
+* We can change HTML data by changing document object's properties
