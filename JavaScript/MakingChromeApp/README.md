@@ -37,3 +37,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * `on...`: event related property
 * Javascript can listen **events**
 * `addEventListener("click", func)`: listen for 'click' event -> when click happens, do 'func'
+
+## 3.4 Events Part two
+* MDN: HTML Explanation -> So many things that can be detected
