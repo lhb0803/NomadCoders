@@ -40,3 +40,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 3.4 Events Part two
 * MDN: HTML Explanation -> So many things that can be detected
+
+## 3.5 More Events
+* Another way to handle events

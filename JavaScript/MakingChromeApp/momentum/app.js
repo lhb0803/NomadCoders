@@ -1,19 +1,40 @@
-const title = document.getElementById("title");
+const h1 = document.getElementById("title");
 
 function handleTitleClick() {
     console.log("title was clicked");
-    title.style.color = "blue";
+    h1.style.color = "blue";
 }
 
 function handleMouseEnter() {
-    console.log("mouse is here!");
-    title.innerText = "Mouse is here!"
+    h1.innerText = "Mouse is here!"
 }
 
 function handleMouseLeave() {
-    title.innerText = "Mouse is gone!"
+    h1.innerText = "Mouse is gone!"
 }
 
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy() {
+    alert("copier!!");
+}
+
+function handleWindowOffline() {
+    alert("SOS no WIFI");
+}
+
+function handleWindowOnline() {
+    alert("WIFI Connected")
+}
+
+h1.onclick = handleTitleClick;
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
