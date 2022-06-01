@@ -28,3 +28,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 3.1 HTML in Javascript
 * Get things from document
 * Change things from document
+
+## 3.2 Searching for Elements
+* `getElementsByClassName()`, `getElementsByTagName()`
+* `querySelector()`, `querySelectorAll()`: can access through CSS notation (much better way)
