@@ -1,7 +1,8 @@
 const title = document.getElementById("title");
 
-console.dir(title);
-title.innerText = "Got you!";
+function handleTitleClick() {
+    console.log("title was clicked");
+    title.style.color = "blue";
+}
 
-console.log(title.id);
-console.log(title.className);
+title.addEventListener("click", handleTitleClick);

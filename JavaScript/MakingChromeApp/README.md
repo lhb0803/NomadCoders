@@ -32,3 +32,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 3.2 Searching for Elements
 * `getElementsByClassName()`, `getElementsByTagName()`
 * `querySelector()`, `querySelectorAll()`: can access through CSS notation (much better way)
+
+## 3.3 Events
+* `on...`: event related property
+* Javascript can listen **events**
+* `addEventListener("click", func)`: listen for 'click' event -> when click happens, do 'func'
