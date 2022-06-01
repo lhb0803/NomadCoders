@@ -46,3 +46,10 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 3.6 CSS in Javascript
 * if-else
+* Ready to build app
+    - step 1. get the element
+    - step 2. listen to the event
+    - step 3. react to the event
+
+## 3.7 CSS in Javascript Part two
+* Right tool for style is **CSS** (not JS): JS is appropriate for animation
