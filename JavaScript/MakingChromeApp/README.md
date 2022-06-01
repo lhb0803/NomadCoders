@@ -24,3 +24,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * A browser has a **document** object
 * We can call HTML tag from JS environment through an access to document object
 * We can change HTML data by changing document object's properties
+
+## 3.1 HTML in Javascript
+* Get things from document
+* Change things from document
