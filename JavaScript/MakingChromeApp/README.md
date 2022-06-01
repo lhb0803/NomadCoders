@@ -53,3 +53,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 3.7 CSS in Javascript Part two
 * Right tool for style is **CSS** (not JS): JS is appropriate for animation
+
+## 3.8 CSS in Javascript Part three
+* Fixing bug: not changing pre-existed class name
