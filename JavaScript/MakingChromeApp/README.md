@@ -56,3 +56,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 3.8 CSS in Javascript Part three
 * Fixing bug: not changing pre-existed class name
+
+## 4.0 Input Values
+* Start making App
