@@ -59,3 +59,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 4.0 Input Values
 * Start making App
+
+## 4.1 Form Submission
+* HTML helps us filling form
+* But the form is submitted and the browser is refreshed
