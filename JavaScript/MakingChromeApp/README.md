@@ -66,4 +66,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 4.2 Events
 * event function recieve an **argument**
-* 
+
+## 4.3 Events part two
+* Handling Other events like `MouseEvent` 
+* `MouseEvent` shows X, Y coordinates
+* Each event returns different information
