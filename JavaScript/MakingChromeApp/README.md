@@ -79,3 +79,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 4.5 Saving Username
 * `localStorage` in Browser: `setItem(key, value)`, `removeItem(key)`
 * Save the user name to `localStorage`
+
+## 4.6 Loading Username
+*
