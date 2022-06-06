@@ -71,3 +71,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * Handling Other events like `MouseEvent` 
 * `MouseEvent` shows X, Y coordinates
 * Each event returns different information
+
+## 4.4 Getting Username
+* Hiding and Showing through CSS
+* Combining string with backtick and $
