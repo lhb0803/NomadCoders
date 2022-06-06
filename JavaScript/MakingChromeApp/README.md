@@ -75,3 +75,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 4.4 Getting Username
 * Hiding and Showing through CSS
 * Combining string with backtick and $
+
+## 4.5 Saving Username
+* `localStorage` in Browser: `setItem(key, value)`, `removeItem(key)`
+* Save the user name to `localStorage`
