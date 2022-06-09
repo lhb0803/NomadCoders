@@ -81,4 +81,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * Save the user name to `localStorage`
 
 ## 4.6 Loading Username
-*
+
+## Assignment04
+* [link](https://codesandbox.io/s/day-three-blueprint-forked-ztr0cr?file=/src/index.js)
