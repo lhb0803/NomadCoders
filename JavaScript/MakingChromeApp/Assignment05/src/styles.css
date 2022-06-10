@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+}
+
+.smallWidth {
+    background-color: #3498db;
+}
+
+.mediumWidth {
+    background-color: #9b59b6;
+}
+
+.largeWidth {
+    background-color: #f39c12;
+}
+
+h2 {
+    color: white;
+}

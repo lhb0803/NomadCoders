@@ -84,3 +84,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## Assignment04
 * [link](https://codesandbox.io/s/day-three-blueprint-forked-ztr0cr?file=/src/index.js)
+
+## Assignment05
+* [link](https://codesandbox.io/s/assignment05-qtj7yx)
