@@ -2,6 +2,12 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+const toDos = [];
+
+function saveToDos() {
+    localStorage.setItem("todos", JSON.stringify(toDos));
+}
+
 function deleteToDo(event) {
     console.dir(event.target.parentElement.innerText); // shows the target which is clicked
     const li = event.target.parentElement;
@@ -9,7 +15,7 @@ function deleteToDo(event) {
 }
 
 function paintToDo(newTodo) {
-    // create list
+    // add ToDo list
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
@@ -25,7 +31,9 @@ function handleToDoSubmit(event) {
     event.preventDefault();
     const newToDo = toDoInput.value;
     toDoInput.value = "";
+    toDos.push(newToDo);
     paintToDo(newToDo);
+    saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);

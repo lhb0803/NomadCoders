@@ -123,3 +123,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * `event` argument shows **which button is clicked**
     * `event.path`, `event.target`, `event.target.parentElement`
     * `console.dir(event.target)`: shows button's property
+
+## 7.3 Saving ToDos
+* `localStorage`: save to the browser
+* `localStorage` **cannot save array** ; only text can be saved
+    * `JSON.stringify(object)`: turns object to string
