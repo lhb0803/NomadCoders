@@ -128,3 +128,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * `localStorage`: save to the browser
 * `localStorage` **cannot save array** ; only text can be saved
     * `JSON.stringify(object)`: turns object to string
+
+## 7.4 Loading ToDos part One
+* How to Show on window
+* `JSON.parse(String)`: turns string to object
+* `forEach(func)`: each element goes into `func`'s argument
