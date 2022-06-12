@@ -103,3 +103,9 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 6.0 Quotes
 * Randomness by `Math` module
 * `Math.round()`, `Math.ceil()`, `Math.floor()`: make a float an integer
+
+## 6.1 Background
+* Create element from JS
+    * `document.createElement("img")`
+* Add the element to the body
+    * `document.body.appendChild(bgImage)`
