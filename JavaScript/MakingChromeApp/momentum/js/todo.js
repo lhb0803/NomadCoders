@@ -11,11 +11,9 @@ function saveToDos() {
 }
 
 function deleteToDo(event) {
-    console.dir(event.target.parentElement.innerText); // shows the target which is clicked
     const li = event.target.parentElement;
     li.remove();
-    console.log(li.id);
-    toDos = toDos.filter(toDoObj => toDoObj.id != li.id);
+    toDos = toDos.filter(toDoObj => toDoObj.id !== parseInt(li.id));
     saveToDos();
 }
 

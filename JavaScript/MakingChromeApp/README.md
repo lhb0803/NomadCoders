@@ -148,3 +148,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * How to Delete an element from array
 * `array.filter(filterFunc)`: `filterFunc` should return true or false
     * if an element should be included -> should return true
+
+## 7.8 Deleting ToDos part Three
+* `filter` doesn't modify original array
+* `li.id` is not integer, is **string**
