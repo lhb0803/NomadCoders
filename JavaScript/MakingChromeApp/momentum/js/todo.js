@@ -14,9 +14,10 @@ function deleteToDo(event) {
     console.dir(event.target.parentElement.innerText); // shows the target which is clicked
     const li = event.target.parentElement;
     li.remove();
+    console.log(li.id);
 }
 
-function paintToDo(newTodo) {
+function paintToDo(newToDoObj) {
     // add ToDo list
     const li = document.createElement("li");
     const span = document.createElement("span");
@@ -25,7 +26,8 @@ function paintToDo(newTodo) {
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
-    span.innerText = newTodo;
+    li.id = newToDoObj.id;
+    span.innerText = newToDoObj.text;
     toDoList.appendChild(li);
 }
 
@@ -33,8 +35,12 @@ function handleToDoSubmit(event) {
     event.preventDefault();
     const newToDo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newToDo);
-    paintToDo(newToDo);
+    const newToDoObj = {
+        text: newToDo,
+        id: Date.now()
+    }
+    toDos.push(newToDoObj);
+    paintToDo(newToDoObj);
     saveToDos();
 }
 

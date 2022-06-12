@@ -138,3 +138,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * How to restore instead of overwriting
 * update JS array to `localStorage`'s array
 
+## 7.6 Deleting ToDos part One
+* Give toDos an **id**
+* Make toDos as array of **Object**s
+* `Date.now()` gives miliseconds -> use it as an **id**
+* Can delete with the **id**
