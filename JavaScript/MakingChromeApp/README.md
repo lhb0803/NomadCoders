@@ -112,3 +112,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 7.0 Setup
 * Todos
+
+## 7.1 Adding ToDos
+* Create list (`<li>`)
+* Add `<span>` to `<li>` by `li.appendChild()`
+* Problem: cannot delete or save list
