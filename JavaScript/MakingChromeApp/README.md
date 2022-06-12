@@ -133,3 +133,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * How to Show on window
 * `JSON.parse(String)`: turns string to object
 * `forEach(func)`: each element goes into `func`'s argument
+
+## 7.5 Loading ToDos part Two
+* How to restore instead of overwriting
+* update JS array to `localStorage`'s array
+
