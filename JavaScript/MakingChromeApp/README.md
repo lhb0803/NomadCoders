@@ -99,3 +99,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 5.2 PadStart
 * `"string".padStart(2,"0")`
+
+## 6.0 Quotes
+* Randomness by `Math` module
+* `Math.round()`, `Math.ceil()`, `Math.floor()`: make a float an integer
