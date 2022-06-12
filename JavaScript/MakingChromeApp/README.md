@@ -143,3 +143,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * Make toDos as array of **Object**s
 * `Date.now()` gives miliseconds -> use it as an **id**
 * Can delete with the **id**
+
+## 7.7 Deleting ToDos part Two
+* How to Delete an element from array
+* `array.filter(filterFunc)`: `filterFunc` should return true or false
+    * if an element should be included -> should return true
