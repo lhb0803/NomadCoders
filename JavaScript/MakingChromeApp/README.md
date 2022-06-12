@@ -91,3 +91,8 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## 5.0 Intervals
 * divide source code in different file - code file per feature
+* `setInterval(func, interval)`: repeat `func` every `interval`
+
+## 5.1 Timeouts and Dates
+* `setTimeout()`: wait
+* `Date()`: `new Date()`
