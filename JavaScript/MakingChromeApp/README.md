@@ -96,3 +96,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 5.1 Timeouts and Dates
 * `setTimeout()`: wait
 * `Date()`: `new Date()`
+
+## 5.2 PadStart
+* `"string".padStart(2,"0")`
