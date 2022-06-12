@@ -109,3 +109,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
     * `document.createElement("img")`
 * Add the element to the body
     * `document.body.appendChild(bgImage)`
+
+## 7.0 Setup
+* Todos
