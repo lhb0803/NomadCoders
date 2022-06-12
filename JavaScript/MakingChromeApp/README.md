@@ -81,9 +81,13 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * Save the user name to `localStorage`
 
 ## 4.6 Loading Username
+* Get user name from `localStorage`
 
 ## Assignment04
 * [link](https://codesandbox.io/s/day-three-blueprint-forked-ztr0cr?file=/src/index.js)
 
 ## Assignment05
 * [link](https://codesandbox.io/s/assignment05-qtj7yx)
+
+## 5.0 Intervals
+* divide source code in different file - code file per feature
