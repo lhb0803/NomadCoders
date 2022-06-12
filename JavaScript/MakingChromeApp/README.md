@@ -117,3 +117,9 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * Create list (`<li>`)
 * Add `<span>` to `<li>` by `li.appendChild()`
 * Problem: cannot delete or save list
+
+## 7.2 Deleting ToDos
+* Button should listen click event
+* `event` argument shows **which button is clicked**
+    * `event.path`, `event.target`, `event.target.parentElement`
+    * `console.dir(event.target)`: shows button's property
