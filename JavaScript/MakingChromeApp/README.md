@@ -152,3 +152,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 7.8 Deleting ToDos part Three
 * `filter` doesn't modify original array
 * `li.id` is not integer, is **string**
+
+## Assignment06
+* [link](https://codesandbox.io/s/assignment06-pptcn0)
