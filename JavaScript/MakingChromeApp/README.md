@@ -162,3 +162,7 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 
 ## Assignment07
 * [link](https://codesandbox.io/s/assignment07-idnuiw)
+
+## 8.1 Weather API
+* Using API
+* `fetch()` -> Chrome: Network
