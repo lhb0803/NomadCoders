@@ -159,3 +159,6 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 ## 8.0 Geolocation
 * `navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)` returns position
 * API: openweathermap.org
+
+## Assignment07
+* [link](https://codesandbox.io/s/assignment07-idnuiw)
