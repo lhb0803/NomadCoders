@@ -153,16 +153,18 @@ Lecture from NomadCoders: [link](https://nomadcoders.co/javascript-for-beginners
 * `filter` doesn't modify original array
 * `li.id` is not integer, is **string**
 
-## Assignment06
+## Assignment07
 * [link](https://codesandbox.io/s/assignment06-pptcn0)
 
 ## 8.0 Geolocation
 * `navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)` returns position
 * API: openweathermap.org
 
-## Assignment07
+## Assignment08
 * [link](https://codesandbox.io/s/assignment07-idnuiw)
 
 ## 8.1 Weather API
 * Using API
 * `fetch()` -> Chrome: Network
+
+## Assignment09

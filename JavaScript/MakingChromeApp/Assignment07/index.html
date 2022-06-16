@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Time Until Christmas Eve<</title>
+    <title>Assignment06</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css">
   </head>
+
   <body>
-    <h1>Time Until Christmas Eve</h1>
-    <h2 class="js-clock"></h2>
+    <h1>Random Number Game</h1>
+    <h3>
+        <form id="upper-limit">
+            Generate a number between 0 and
+            <input
+                required
+                type="number">
+        </form>
+    </h3>
+    <div>
+        <form id="guessing">
+        Guess the number:
+            <input
+                required
+                type="number"
+            >
+            <input type="submit" value = "Play!">
+            </button>
+        </form>
+    </div>
+    <div class="hidden" id="matching">
+
+    </div>
+    <div class="hidden" id="result">
+        <b></b>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
