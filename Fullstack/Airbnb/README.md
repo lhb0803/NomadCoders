@@ -14,3 +14,26 @@
 * Flask = lego pieces <-> Django = box, full of toys
 * Minimalism <-> Maximalism
 
+# 1. Set up
+## 1.0 Python3
+```
+conda create -n "airbnb" python=3.10
+conda activate airbnb
+```
+## 1.1 Poetry
+* [Installation](https://python-poetry.org/docs/#installation)
+    ```
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+* Package Management (like a bubble)
+    * [Conda + Poetry](https://stackoverflow.com/questions/70851048/does-it-make-sense-to-use-conda-poetry)
+* `poetry shell`: enter the bubble -> `exit`: get outside the bubble
+* `poetry.lock`, `pyproject.toml`: two files that make a bubble
+
+## 1.2 Start Project
+* start project
+    ```
+    poetry shell
+    django-admin startproject config .
+    ```
+* vscode gitignore extension
