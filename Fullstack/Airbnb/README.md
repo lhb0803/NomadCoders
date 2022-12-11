@@ -59,3 +59,5 @@ conda activate airbnb
 
 ## 2.5 dir
 * underscore method
+* internally Python runs `__str__` method
+* `print(dir(object))`: print properties and methods of class => very userful when extending class and overriding
