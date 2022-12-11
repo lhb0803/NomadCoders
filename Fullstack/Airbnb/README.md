@@ -37,3 +37,25 @@ conda activate airbnb
     django-admin startproject config .
     ```
 * vscode gitignore extension
+
+# 2. OOP With Python
+* The 4 Pillars of OOP: Abstraction, Encapsulation, Inheritance, Polymorphism
+
+## 2.1 Constructor
+* `__init__`: constructor in Python
+* `self`: default parameter
+
+## 2.2 Inheritance
+* extends class and re-use
+
+## 2.3 `super()`
+* `super()`: call parent class
+* `super().__init__()`: initialize parent class
+
+## 2.4 Recap
+* Django is OOP Framework
+* Override
+* underscore methods
+
+## 2.5 dir
+* underscore method
