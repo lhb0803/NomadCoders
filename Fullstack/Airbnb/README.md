@@ -61,3 +61,11 @@ conda activate airbnb
 * underscore method
 * internally Python runs `__str__` method
 * `print(dir(object))`: print properties and methods of class => very userful when extending class and overriding
+
+# 3 Django Basics
+## 3.0 Run Server
+```
+python manage.py runserver
+```
+* cannot run `poetry shell` on anaconda env
+* 127.0.0.1:8000/admin: error yet
