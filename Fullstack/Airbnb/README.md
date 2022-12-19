@@ -69,3 +69,13 @@ python manage.py runserver
 ```
 * cannot run `poetry shell` on anaconda env
 * 127.0.0.1:8000/admin: error yet
+
+## 3.1 Migrations
+* Django is looking at db.sqlite3 (django_sesion) -> looking for admin session
+* Django has 18 files somewhere and we run those files and the files will modify our database
+* Migration: modification of shape (state) of database
+    ```
+    python manage.py migrate
+    ```
+* Now, admin panel is applied
+* Migration will be used a lot
