@@ -79,3 +79,12 @@ python manage.py runserver
     ```
 * Now, admin panel is applied
 * Migration will be used a lot
+
+## 3.2 Recap
+* delete db -> run server again: error messages
+    ```
+    You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+    Run 'python manage.py migrate' to apply them.
+    ```
+* Migration file: files including python code that **transforms database**
+* Django has many built-ins
