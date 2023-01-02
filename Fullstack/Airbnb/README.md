@@ -96,3 +96,14 @@ python manage.py createsuperuser
 * Django create our username to database
 * Now, we get admin panel (for free)
 * It's not static: it's functional
+
+## 3.4 Framework vs Library
+* Django is Framework
+* Library is like requests: we import and call
+    * We write methods, class and other codes using the library
+* Framework calls our code: framework looks our code and call it
+    * `config/settings.py`: Django looks the variable `TIME_ZONE` and uses it
+    * depending on my code, framework changes its action
+    * `config/urls.py` (another example): Django uses the variable to get admin url
+    * Django is **always looking at variables**
+    * We are in Django house and we should follow Django rules
