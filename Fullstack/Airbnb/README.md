@@ -88,3 +88,11 @@ python manage.py runserver
     ```
 * Migration file: files including python code that **transforms database**
 * Django has many built-ins
+
+## 3.3 Super User
+```
+python manage.py createsuperuser
+```
+* Django create our username to database
+* Now, we get admin panel (for free)
+* It's not static: it's functional
