@@ -107,3 +107,10 @@ python manage.py createsuperuser
     * `config/urls.py` (another example): Django uses the variable to get admin url
     * Django is **always looking at variables**
     * We are in Django house and we should follow Django rules
+
+## 3.5 Apps
+* Apps = Folders: Data & Logic
+* Django capsulates data + logic of an application
+    * should write each capsule for application => capsule: Module
+    * each applications link to each other
+* Modularity makes application more organizable
