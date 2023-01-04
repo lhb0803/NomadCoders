@@ -114,3 +114,15 @@ python manage.py createsuperuser
     * should write each capsule for application => capsule: Module
     * each applications link to each other
 * Modularity makes application more organizable
+
+## 4.0 Models
+* startapp
+    ```
+    python manage.py startapp houses
+    ```
+* admin, model
+    * model: description of shape of data
+    * Django will talk to database for you with model
+    * more descriptive, better talk to database
+    * Django doesn't know about the model until we add config
+        * -> `config/settings.py` -> add `INSTALLED_APPS`
