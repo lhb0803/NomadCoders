@@ -126,3 +126,16 @@ python manage.py createsuperuser
     * more descriptive, better talk to database
     * Django doesn't know about the model until we add config
         * -> `config/settings.py` -> add `INSTALLED_APPS`
+
+## 4.1 Migrations
+* Django will automatically generage admin panel for your custom data
+* at `admin.py`, make HouseAdmin class
+* no such table error: shape of database doesn't match with what Django wants
+    * database doesn't know about House model
+    * we should inform database about House model
+    * Migration: modeify shape of database
+        ```
+        python manage.py makemigrations
+        python manage.py migrate
+        ```
+    
