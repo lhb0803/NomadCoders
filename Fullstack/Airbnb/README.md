@@ -138,4 +138,6 @@ python manage.py createsuperuser
         python manage.py makemigrations
         python manage.py migrate
         ```
-    
+
+## 4.2 Recap
+* Django translates python code to sql
