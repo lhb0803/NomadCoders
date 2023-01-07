@@ -147,3 +147,6 @@ python manage.py createsuperuser
 * customize House class's string method
 * customize HouseAdmin's property
     * list, filter, search
+
+## 4.4 Documentation
+* [Django document](https://www.djangoproject.com/)
