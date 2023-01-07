@@ -150,3 +150,4 @@ python manage.py createsuperuser
 
 ## 4.4 Documentation
 * [Django document](https://www.djangoproject.com/)
+    * A lot of fields
