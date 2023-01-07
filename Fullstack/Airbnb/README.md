@@ -141,3 +141,9 @@ python manage.py createsuperuser
 
 ## 4.2 Recap
 * Django translates python code to sql
+
+## 4.3 Admin
+* framework: write correct property at correct places
+* customize House class's string method
+* customize HouseAdmin's property
+    * list, filter, search
