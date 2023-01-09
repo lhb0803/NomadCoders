@@ -115,6 +115,7 @@ python manage.py createsuperuser
     * each applications link to each other
 * Modularity makes application more organizable
 
+# Django Apps
 ## 4.0 Models
 * startapp
     ```
@@ -152,4 +153,9 @@ python manage.py createsuperuser
 * [Django document](https://www.djangoproject.com/)
     * A lot of fields
 
+# Users App
 ## 5.0 Introductions
+* Django's vanila user admin model provides various functions
+* But, we need to customize it
+    * Option 1. We will create `Profile` model using `User` model in Django
+* If you use default `User` model, it is very difficult to change in the mid of the project
