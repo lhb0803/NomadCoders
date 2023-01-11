@@ -159,3 +159,13 @@ python manage.py createsuperuser
 * But, we need to customize it
     * Option 1. We will create `Profile` model using `User` model in Django
 * If you use default `User` model, it is very difficult to change in the mid of the project
+
+## 5.1 Custom Model
+```
+python manage.py startapp users
+```
+* import from default [user model](https://docs.djangoproject.com/en/4.1/topics/auth/customizing/)
+    * inherit AbstractUser
+* delete db and all migrations
+    * notice not migration dir, just `000x_xxxx.py`
+* re create super user by `python manage.py createsuperuser`
