@@ -169,3 +169,10 @@ python manage.py startapp users
 * delete db and all migrations
     * notice not migration dir, just `000x_xxxx.py`
 * re create super user by `python manage.py createsuperuser`
+
+
+## 5.2 Custom Fields
+* customize abstract user model
+* make ghost field (necessary in AbstractUser model, but not in Custom User model)
+    * `editable = False`
+* Whenever you change models.py, you need to **make migration and migrate**
