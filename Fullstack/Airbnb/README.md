@@ -176,3 +176,9 @@ python manage.py startapp users
 * make ghost field (necessary in AbstractUser model, but not in Custom User model)
     * `editable = False`
 * Whenever you change models.py, you need to **make migration and migrate**
+
+## 5.3 Defaults
+* We should sync Django code and Database -> migration
+* Cuase of migration error: non-nullable field `is_host`
+    * if no default option: when add `is_host` column value to existing row, Django asks you to select what the value would be
+    * `null = True` option: nullable
