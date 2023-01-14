@@ -185,3 +185,8 @@ python manage.py startapp users
 
 ## 5.4 Custom Admin
 * to see customizable option in Admin panel, you should customize UserAdmin
+
+## 5.5 Foreign Keys
+* How we can connect each models
+* Django automatically creates `id` (aka `pk`)
+* `models.ForeignKey("users.User", on_delete=models.CASCASE)`
