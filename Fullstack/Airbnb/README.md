@@ -182,3 +182,6 @@ python manage.py startapp users
 * Cuase of migration error: non-nullable field `is_host`
     * if no default option: when add `is_host` column value to existing row, Django asks you to select what the value would be
     * `null = True` option: nullable
+
+## 5.4 Custom Admin
+* to see customizable option in Admin panel, you should customize UserAdmin
