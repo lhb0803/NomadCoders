@@ -190,3 +190,7 @@ python manage.py startapp users
 * How we can connect each models
 * Django automatically creates `id` (aka `pk`)
 * `models.ForeignKey("users.User", on_delete=models.CASCASE)`
+
+## 5.6 Super Mega Recap
+* `defaults`: when add new column, how handle pre-existing data
+* relationship of each model
