@@ -194,3 +194,4 @@ python manage.py startapp users
 ## 5.6 Super Mega Recap
 * `defaults`: when add new column, how handle pre-existing data
 * relationship of each model
+* VScode extensions: SQLite Viewer -> make db.sqlite3 viewable table form
