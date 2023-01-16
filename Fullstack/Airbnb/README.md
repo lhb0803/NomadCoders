@@ -62,7 +62,7 @@ conda activate airbnb
 * internally Python runs `__str__` method
 * `print(dir(object))`: print properties and methods of class => very userful when extending class and overriding
 
-# 3 Django Basics
+# 3. Django Basics
 ## 3.0 Run Server
 ```
 python manage.py runserver
@@ -115,7 +115,7 @@ python manage.py createsuperuser
     * each applications link to each other
 * Modularity makes application more organizable
 
-# Django Apps
+# 4. Django Apps
 ## 4.0 Models
 * startapp
     ```
@@ -153,7 +153,7 @@ python manage.py createsuperuser
 * [Django document](https://www.djangoproject.com/)
     * A lot of fields
 
-# Users App
+# 5. Users App
 ## 5.0 Introductions
 * Django's vanila user admin model provides various functions
 * But, we need to customize it
@@ -195,3 +195,12 @@ python manage.py startapp users
 * `defaults`: when add new column, how handle pre-existing data
 * relationship of each model
 * VScode extensions: SQLite Viewer -> make db.sqlite3 viewable table form
+
+# 6. Models and Admin
+## 6.0. User Model
+* `models.ImageField()`
+    ```
+    poetry add Pillow
+    ```
+* optional CharField: make class inheriting from `models.TextChoices`
+* `blank = True` allows empty data (different than allowing null)
