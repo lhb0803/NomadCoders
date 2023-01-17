@@ -204,3 +204,9 @@ python manage.py startapp users
     ```
 * optional CharField: make class inheriting from `models.TextChoices`
 * `blank = True` allows empty data (different than allowing null)
+
+## 6.1. Room Model
+```
+python manage.py startapp rooms
+```
+* many to many relationship
