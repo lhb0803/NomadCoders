@@ -210,3 +210,10 @@ python manage.py startapp users
 python manage.py startapp rooms
 ```
 * many to many relationship
+
+## 6.2 Many to Many
+* `auto_now_add = True`: added when object is created
+* `auto_now = True`: added when updated
+* copy paste? -> No!
+    * use common model
+    * `class Meta: abstract = True`: make the model not visible in database
