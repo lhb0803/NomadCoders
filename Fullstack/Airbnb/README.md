@@ -217,3 +217,9 @@ python manage.py startapp rooms
 * copy paste? -> No!
     * use common model
     * `class Meta: abstract = True`: make the model not visible in database
+
+## 6.3 Recap
+* Many to Many
+* `CommonModel`
+    * `abstract = True`: Django ignores the model (not add to database)
+* How to add `Amenity` object
