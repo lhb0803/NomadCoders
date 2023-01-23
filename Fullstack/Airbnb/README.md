@@ -231,3 +231,6 @@ python manage.py startapp rooms
 
 ## 6.5 Experiences
 * recap for making models and admins
+
+## 6.6 Categories
+* category choices -> Rooms, Experiences
