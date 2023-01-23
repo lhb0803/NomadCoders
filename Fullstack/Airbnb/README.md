@@ -234,3 +234,6 @@ python manage.py startapp rooms
 
 ## 6.6 Categories
 * category choices -> Rooms, Experiences
+
+## 6.7 Reviews
+* can be included in Rooms, Experiences
