@@ -237,3 +237,7 @@ python manage.py startapp rooms
 
 ## 6.7 Reviews
 * can be included in Rooms, Experiences
+
+## 6.8 Wishlists
+* a wishlist can include many rooms or experiences => ManyToManyField
+* a wishlist is owned by a single user => ForeingKey
