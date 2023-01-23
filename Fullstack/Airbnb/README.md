@@ -240,4 +240,10 @@ python manage.py startapp rooms
 
 ## 6.8 Wishlists
 * a wishlist can include many rooms or experiences => ManyToManyField
-* a wishlist is owned by a single user => ForeingKey
+* a wishlist is owned by a single user => ForeignKey
+
+## 6.9 Bookings
+* a booking model is owned by a single user => ForeignKey
+    * a user can have many booking models
+* a booking model can have a single room => ForeignKey
+* `blank = True`: for Django admin
