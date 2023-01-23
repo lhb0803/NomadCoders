@@ -223,3 +223,8 @@ python manage.py startapp rooms
 * `CommonModel`
     * `abstract = True`: Django ignores the model (not add to database)
 * How to add `Amenity` object
+
+## 6.4 Rooms Admin
+* `__str__(self)`: can customize print name
+* `verbose_name_plural`
+* change column name -> run `python manage.py makemigrations` again
