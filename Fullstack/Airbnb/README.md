@@ -228,3 +228,6 @@ python manage.py startapp rooms
 * `__str__(self)`: can customize print name
 * `verbose_name_plural`
 * change column name -> run `python manage.py makemigrations` again
+
+## 6.5 Experiences
+* recap for making models and admins
