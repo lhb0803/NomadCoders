@@ -247,3 +247,8 @@ python manage.py startapp rooms
     * a user can have many booking models
 * a booking model can have a single room => ForeignKey
 * `blank = True`: for Django admin
+
+## 6.10 Medias
+* `OneToOneField`: unique
+    * video - experience is one-to-one
+    * usage example: payment information
