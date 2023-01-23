@@ -252,3 +252,8 @@ python manage.py startapp rooms
 * `OneToOneField`: unique
     * video - experience is one-to-one
     * usage example: payment information
+
+## 6.11 Direct Messages
+* you can check config name in `/apps.py`
+* related_name argument error: error when a same name user **has same Foreign Key**
+* `/apps.py`: can customize verbose_name
