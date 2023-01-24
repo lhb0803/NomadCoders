@@ -257,3 +257,23 @@ python manage.py startapp rooms
 * you can check config name in `/apps.py`
 * related_name argument error: error when a same name user **has same Foreign Key**
 * `/apps.py`: can customize verbose_name
+
+# 7. ORM
+## 7.0 Introductions
+* ORM: Object Relational Mapper
+    * When you build database, Django provides database-abastraction API that lets you create, retrieve, update and delete objects
+    * Now, we learn **how we talk with database**
+    * Not using admin panel, but with **Python code**!
+* `python manage.py shell`: opens console (configured Django: all aplications installed)
+    ```python
+    from rooms.models import Room
+
+    Room.objects.all() # get all Room objects
+    room = Room.objects.get(name="First Home") # get by name
+    room.pk # primary key
+    room.id # room's id
+    room.owner # room's owner (user)
+    room.owner.email # room's owner's email
+    room.price = 3000
+    room.save() # given by Django
+    ```
