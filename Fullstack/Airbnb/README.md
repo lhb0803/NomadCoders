@@ -277,3 +277,22 @@ python manage.py startapp rooms
     room.price = 3000
     room.save() # given by Django
     ```
+
+## 7.1 filter, get, create, delete
+* Manager (=`.objects`): interface that talks to database
+    * `objects.all()`: get all models
+    * `objects.get()`: get unique model (when 0, 2+ returns error)
+    * `objects.filter()`: get certain model with condition => very powerful
+        * `__gt`: greater than
+        * `__gte`: greater than or equal
+        * `__contains`: string that contains certain word
+    * `objects.create()`: creates data => you don't have to use admin panel
+        ```python
+        from rooms.models import Amenity
+        Amenity.objects.create(name='Amenity from the console', description='How cool is this')
+        ```
+    * `model.delete()`
+        ```python
+        to_delete = Amenity.objects.get(pk=4)
+        to_delete.delete()
+        ```
