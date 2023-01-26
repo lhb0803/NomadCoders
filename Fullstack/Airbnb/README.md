@@ -296,3 +296,12 @@ python manage.py startapp rooms
         to_delete = Amenity.objects.get(pk=4)
         to_delete.delete()
         ```
+
+## 7.2 QuerySets
+* `QuerySet`: allows chain operation
+    * example) double filtering
+    ```python
+    Room.objects.filter(pet_friendly=True).exclude(price__lt=15).filter(name__contains="서울")
+    ```
+* `QuerySet` is lazy: only gives you specific data when you actually read it (use it)
+    * hit database with **less traffic**
