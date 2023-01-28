@@ -7,6 +7,7 @@ class ChatRoom(CommonModel):
     """
     users = models.ManyToManyField(
         "users.User",
+        related_name="chatrooms",
     )
 
     def __str__(self) -> str:
@@ -21,11 +22,13 @@ class Message(CommonModel):
         "users.User",
         null=True,
         blank=True,
-        on_delete=models.SET_NULL # if user deletes their account, messages persis
+        on_delete=models.SET_NULL, # if user deletes their account, messages persis
+        related_name="messages",
     )
     room = models.ForeignKey(
         "direct_messages.ChatRoom",
-        on_delete=models.CASCADE # if the chatroom deleted, messages should be deleted
+        on_delete=models.CASCADE, # if the chatroom deleted, messages should be deleted
+        related_name="messages",
     )
 
     def __str__(self) -> str:

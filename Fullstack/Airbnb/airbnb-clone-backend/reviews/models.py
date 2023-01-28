@@ -5,9 +5,9 @@ class Review(CommonModel):
     """
     Review from a User to a Room or Experience
     """
-    user = models.ForeignKey("users.User", on_delete=models.SET_NULL, null=True) # not be deleted when the user deleted the account
-    room = models.ForeignKey("rooms.Room", null=True, blank=True, on_delete=models.CASCADE)
-    experience = models.ForeignKey("experiences.Experience", null=True, blank=True, on_delete=models.CASCADE)
+    user = models.ForeignKey("users.User", on_delete=models.SET_NULL, null=True, related_name="reviews") # not be deleted when the user deleted the account
+    room = models.ForeignKey("rooms.Room", null=True, blank=True, on_delete=models.CASCADE, related_name="reviews")
+    experience = models.ForeignKey("experiences.Experience", null=True, blank=True, on_delete=models.CASCADE, related_name="reviews")
     payload = models.TextField()
     rating = models.PositiveIntegerField()
 
