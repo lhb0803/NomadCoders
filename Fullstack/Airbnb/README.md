@@ -311,3 +311,12 @@ python manage.py startapp rooms
 * when you add column in `list_display` or `list_filter`, Django is trying to look for that columns inside model: **Django looks for _attribute_ or _method_**
     * Option 1. add `total_amenities` method in `models.py`
     * Option 2. add `total_amenities` method in `admin.py`
+
+## 7.4 ForeignKey Filter
+* reverse acessors: to know "Who is pointing to me?"
+    * if foreign key, __operation can work with foriegn key's field
+        ```python
+        # rooms created by "hyobae"
+        Room.objects.filter(owner__username="hyobae")
+        ```
+    * `review.user` vs `user.reviews`
