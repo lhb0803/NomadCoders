@@ -320,3 +320,13 @@ python manage.py startapp rooms
         Room.objects.filter(owner__username="hyobae")
         ```
     * `review.user` vs `user.reviews`
+
+## 7.5 Reverse Accessors
+* `xxx_set`: reverse accessors
+    ```python
+    from users.models import User
+    me = User.objects.get(pk=1)
+    dir(me) # returns all attributes and methods
+    me.room_set.all() # all rooms created from me
+    ```
+* when you assign a foreign key to a model, **the foreign key will recieve `xxx_set` automatically**
