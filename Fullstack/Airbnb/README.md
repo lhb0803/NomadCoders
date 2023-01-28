@@ -331,10 +331,14 @@ python manage.py startapp rooms
     ```
 * when you assign a foreign key to a model, **the foreign key will recieve `xxx_set` automatically**
 
-## related_name
+## 7.6 related_name
 * customize reverse accessors
 * model B assigns model A as foreign key => model A automaticall receives `B_set`
 * in `rooms.models.py`
     ```
     owner = models.ForeignKey("users.User", on_delete=models.CASCADE, related_name="rooms")
     ```
+
+## 7.7 Recap
+* Rooms -> User
+* User <- Rooms
