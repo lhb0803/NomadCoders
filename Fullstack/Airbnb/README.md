@@ -305,3 +305,9 @@ python manage.py startapp rooms
     ```
 * `QuerySet` is lazy: only gives you specific data when you actually read it (use it)
     * hit database with **less traffic**
+
+## 7.3 Admin Methods
+* `filter method`: Lookups method ([link](https://docs.djangoproject.com/en/4.1/topics/db/queries/))
+* when you add column in `list_display` or `list_filter`, Django is trying to look for that columns inside model: **Django looks for _attribute_ or _method_**
+    * Option 1. add `total_amenities` method in `models.py`
+    * Option 2. add `total_amenities` method in `admin.py`
