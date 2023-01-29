@@ -6,6 +6,7 @@ class RoomAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "price",
+        "rating_average",
         "kind",
         "total_amenities",
         "owner",

@@ -342,3 +342,16 @@ python manage.py startapp rooms
 ## 7.7 Recap
 * Rooms -> User
 * User <- Rooms
+
+# 8. Power Admin
+## 8.0 Methods
+* How to optimize querying database
+    * Not recommended
+        ```python
+        self.reviews.all()
+        ```
+        -> because, return all fields even we do not use
+    * Recommended
+        ```python
+        self.reviews.all().values("rating")
+        ```
