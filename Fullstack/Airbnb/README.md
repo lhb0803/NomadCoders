@@ -355,3 +355,12 @@ python manage.py startapp rooms
         ```python
         self.reviews.all().values("rating")
         ```
+
+## 8.1 Search Fields
+* `search_fields`: Django looks contains that word
+    * how to change startswith?
+        * use '^'
+    * how to change exact?
+        * use '='
+* search by foreignkey
+    * `owner__username`

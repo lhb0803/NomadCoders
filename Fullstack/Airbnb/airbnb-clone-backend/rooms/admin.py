@@ -20,6 +20,11 @@ class RoomAdmin(admin.ModelAdmin):
         "pet_friendly",
         "amenities",
     )
+    search_fields =  (
+        "name",
+        "price",
+        "owner__username",
+    )
 
     # 7.3 Option 2
     def total_amenities(self, room):
