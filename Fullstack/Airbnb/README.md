@@ -364,3 +364,9 @@ python manage.py startapp rooms
         * use '='
 * search by foreignkey
     * `owner__username`
+
+## 8.2 Admin Actions
+* delete action
+* decorator: `@admin.action()`
+    * request option: can assure whether the user is superuser or not
+* `actions = (action_func, )`
