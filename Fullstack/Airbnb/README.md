@@ -370,3 +370,15 @@ python manage.py startapp rooms
 * decorator: `@admin.action()`
     * request option: can assure whether the user is superuser or not
 * `actions = (action_func, )`
+
+## 8.3 Custom Filters
+* with postfix `__`, you can use the model's field (by relationship)
+* When you want to make your own filter: Custom Filter
+* make class in `admin.py` which inherits `admin.SimpleListFilter`
+    1. `title`: filter name
+    2. `paramter_name`: parameter name which receives value from `lookups()` function
+    3. define function `lookups()`
+        - `lookups()` takes three arguments: `self`, `request`, `model_admin`
+    4. define function `queryset()`
+        - `queryset()` takes three arguments: `self`, `request`, `query_set`
+        - **`query_set` can be filtered and chained**
