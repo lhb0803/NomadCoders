@@ -382,3 +382,6 @@ python manage.py startapp rooms
     4. define function `queryset()`
         - `queryset()` takes three arguments: `self`, `request`, `query_set`
         - **`query_set` can be filtered and chained**
+
+### Code Challenge!
+* filter that returns bad score reviews
