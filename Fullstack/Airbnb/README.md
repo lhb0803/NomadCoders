@@ -385,3 +385,7 @@ python manage.py startapp rooms
 
 ### Code Challenge!
 * filter that returns bad score reviews
+
+## 8.4 Recap
+* Search Fields
+* Admin Action
