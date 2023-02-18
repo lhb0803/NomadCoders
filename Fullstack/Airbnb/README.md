@@ -389,3 +389,4 @@ python manage.py startapp rooms
 ## 8.4 Recap
 * Search Fields
 * Admin Action
+* Custom Filter
