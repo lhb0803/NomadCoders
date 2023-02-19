@@ -390,3 +390,14 @@ python manage.py startapp rooms
 * Search Fields
 * Admin Action
 * Custom Filter
+
+# 9. URLs and Views
+## 9.0 Views
+* `config/urls.py`: the file Django is looking at when a user goes to specific url
+* First option: add all url in `urlpatterns`
+* Second option: add url for every application (divide and conquer)
+* `models/views.py`: view is a funciton when a user goes to specific url
+    * **name doesn't have to be "view"**: Django doesn't look `views.py`
+    * function `say_hello` automatically receives request object: can know who request and what request
+    * function `say_hello` should return http response
+* `urlpatterns` list in urls.py: `path(url, function executed when user enters the url)`
