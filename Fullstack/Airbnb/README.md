@@ -420,4 +420,8 @@ python manage.py startapp rooms
 ## 9.4 Django Templates
 * Send content to HTML template and the templates renders with content data
 * syntax is a little bit different from python
-* 
+
+## 9.5 DoesNotExist
+* when pk matching query does not exist
+    * should catch the error and render other template
+* `try ~ except ... `: use `DoesNotExist`
