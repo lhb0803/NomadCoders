@@ -425,3 +425,11 @@ python manage.py startapp rooms
 * when pk matching query does not exist
     * should catch the error and render other template
 * `try ~ except ... `: use `DoesNotExist`
+
+## 9.6 Django vs React
+* We are not going to use Template anymore
+* Hard to make Dynamic website with Django Template
+* Django is only for Backend, we use React and JS for Frontend
+* Django is a good API server
+* We will not use `render` in this course anymore
+* We start to build REST API
