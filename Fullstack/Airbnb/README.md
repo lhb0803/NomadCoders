@@ -401,3 +401,9 @@ python manage.py startapp rooms
     * function `say_hello` automatically receives request object: can know who request and what request
     * function `say_hello` should return http response
 * `urlpatterns` list in urls.py: `path(url, function executed when user enters the url)`
+
+## 9.1 Include
+* divide and conquer
+* `include("rooms.urls")`: Django finds urls.py in rooms directory
+    * at `rooms/urls.py`: "rooms/" is considered as root directory so you just write "" in urlpatterns
+    
