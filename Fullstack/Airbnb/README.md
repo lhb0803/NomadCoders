@@ -416,3 +416,8 @@ python manage.py startapp rooms
 * How to render a template
     * How to put data to HTML and show users
 * `render()`: Django automatically looks for HTML template
+
+## 9.4 Django Templates
+* Send content to HTML template and the templates renders with content data
+* syntax is a little bit different from python
+* 
