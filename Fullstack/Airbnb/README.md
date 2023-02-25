@@ -402,7 +402,7 @@ python manage.py startapp rooms
     * function `say_hello` should return http response
 * `urlpatterns` list in urls.py: `path(url, function executed when user enters the url)`
 
-## 9.1 Include
+## 9.1 include
 * divide and conquer
 * `include("rooms.urls")`: Django finds urls.py in rooms directory
     * at `rooms/urls.py`: "rooms/" is considered as root directory so you just write "" in urlpatterns to go to "/rooms"
@@ -411,3 +411,8 @@ python manage.py startapp rooms
 * How to pass argument to url
 * `path("<int:room_id>", views.see_one_room)`
 * need to make argument for `see_one_room` function
+
+## 9.3 render
+* How to render a template
+    * How to put data to HTML and show users
+* `render()`: Django automatically looks for HTML template
