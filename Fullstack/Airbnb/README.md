@@ -433,3 +433,14 @@ python manage.py startapp rooms
 * Django is a good API server
 * We will not use `render` in this course anymore
 * We start to build REST API
+
+# 10. Django REST Framework
+## 10.0 Introduction
+* Install Django REST Framework ([main site](https://www.django-rest-framework.org/))
+    ```
+    poetry add djangorestframework
+    ```
+* Why we use API?
+    * we will give JSON instead of HTML
+    * React JS will use the JSON data and show it to use beautifully
+    * [Basics of REST API](https://www.youtube.com/watch?v=4DxHX95Lq2U)
