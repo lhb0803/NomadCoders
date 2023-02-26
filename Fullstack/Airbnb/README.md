@@ -467,3 +467,9 @@ python manage.py startapp rooms
 * define which fields the model has: `name`, `kind`, ...
     * the fields defined in the class would be exposed
 * very annoying to define all fields that model has -> will do defining automatically
+
+## 10.4 POST Requests
+* We need to tell Django REST Framework to allow `POST` method
+    * at `@api_view()`, put list `["GET", "POST"]`
+* When you get data from user, **You need to validate data**
+    * serializers help translating data sent from user to our DB data
