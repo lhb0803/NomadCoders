@@ -1,8 +1,15 @@
 from django.shortcuts import render
 from .models import Category
-from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 # Create your views here.
+
+@api_view()
 def categories(request):
     all_categories = Category.objects.all()
-    return JsonResponse({"ok": True})
+    return Response(
+        {
+            "ok": True,
+        }
+    )

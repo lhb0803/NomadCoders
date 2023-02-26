@@ -454,3 +454,9 @@ python manage.py startapp rooms
 * at real job, you don't make APIs for all methods above
     * you don't allow user to delete data
 * at `views.py`, use `JsonResponse` to give client JSON data
+
+## api_view
+* `serializers`: serialize QuerySet to JSON
+* you need to choose which url and view function should be in Django REST Framework
+    * **Use Decorator**: `@api_vew()`
+    * Django REST framework provides a nice form to use
