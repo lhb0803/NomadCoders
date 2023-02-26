@@ -444,3 +444,13 @@ python manage.py startapp rooms
     * we will give JSON instead of HTML
     * React JS will use the JSON data and show it to use beautifully
     * [Basics of REST API](https://www.youtube.com/watch?v=4DxHX95Lq2U)
+
+## 10.1 JsonResponse
+* HTTP Methods
+    * `GET`: get data from server
+    * `POST`: send data to server
+    * `PUT`: update data to server
+    * `DELETE`: delete data at server
+* at real job, you don't make APIs for all methods above
+    * you don't allow user to delete data
+* at `views.py`, use `JsonResponse` to give client JSON data
