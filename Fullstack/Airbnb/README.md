@@ -494,3 +494,8 @@ python manage.py startapp rooms
 
 ## 10.8 delete()
 * `rest_framework.status` has every status
+
+## 10.9 Recap
+* serializer **validates** data
+* `POST`: `save()` calls `create()`
+* `PUT`: `save()` calls `update()`
