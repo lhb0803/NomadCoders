@@ -455,8 +455,15 @@ python manage.py startapp rooms
     * you don't allow user to delete data
 * at `views.py`, use `JsonResponse` to give client JSON data
 
-## api_view
+## 10.2 api_view
 * `serializers`: serialize QuerySet to JSON
 * you need to choose which url and view function should be in Django REST Framework
     * **Use Decorator**: `@api_vew()`
     * Django REST framework provides a nice form to use
+
+## 10.3 Serializer
+* `Serializer`: Translate Django model to JSON
+* inherit from `serializers.Serializer` and make own Serializer
+* define which fields the model has: `name`, `kind`, ...
+    * the fields defined in the class would be exposed
+* very annoying to define all fields that model has -> will do defining automatically
