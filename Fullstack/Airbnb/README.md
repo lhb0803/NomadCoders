@@ -483,3 +483,11 @@ python manage.py startapp rooms
 * `save()`: `Serializer` automatically searches for create method
     * we need to handle creation
 * `**` python operator: turns dictionary into `key=value` format
+
+## 10.7 update()
+* `PUT` request
+* handling error: `rest_framework.exceptions.NotFound`
+* `partial=True`: when you only changes partial field
+* `save()`: at this time, **you don't call `create()`**
+    * the serializer knows that user is trying to update the data because `instance` argument is provided
+* dictionary's `get()` method: when you define `default` option (second parameter), `get`returns the `default` value when the key doesn't exist
