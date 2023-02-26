@@ -499,3 +499,10 @@ python manage.py startapp rooms
 * serializer **validates** data
 * `POST`: `save()` calls `create()`
 * `PUT`: `save()` calls `update()`
+
+## 10.10 APIView
+* code deletion begin!: much simpler code with Django REST Framework
+* make class `Categories` which inherits APIView
+    * define method `get()`, `method()`
+* at `urlpatterns`, call methods by calling `Categories.as_view()`
+* `get_object()`: Django Framework convention
