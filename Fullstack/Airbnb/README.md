@@ -506,3 +506,17 @@ python manage.py startapp rooms
     * define method `get()`, `method()`
 * at `urlpatterns`, call methods by calling `Categories.as_view()`
 * `get_object()`: Django Framework convention
+
+## 10.11 ModelSerializer
+* We will never make Serializer by ourselves!
+* at `models.py`, we can infer Serializer
+* `ModelSerializer`: automatically determines a set of serializer fields based on the model fields
+    * has default `create()`, `update()` implementation
+    * by below code, the serializer knows which model is to be serialized
+        ```python
+        class Meta:
+            model = Category
+        ```
+    * two options to show fields: include or excldue
+        1. include: `fields = "__all__"`
+        2. exclude: `exclude = (...,)`
