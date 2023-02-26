@@ -473,3 +473,8 @@ python manage.py startapp rooms
     * at `@api_view()`, put list `["GET", "POST"]`
 * When you get data from user, **You need to validate data**
     * serializers help translating data sent from user to our DB data
+
+## 10.5 is_valid()
+* `Serializer` automatically checks data from user, so we don't need to validate it ourselves
+    * `is_valid()`: returns whether the data user sends is valid or not
+    * field of which `read_only=True`: user doesn't have to specify the field
