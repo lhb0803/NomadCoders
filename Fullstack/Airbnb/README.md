@@ -478,3 +478,8 @@ python manage.py startapp rooms
 * `Serializer` automatically checks data from user, so we don't need to validate it ourselves
     * `is_valid()`: returns whether the data user sends is valid or not
     * field of which `read_only=True`: user doesn't have to specify the field
+
+## 10.6 save()
+* `save()`: `Serializer` automatically searches for create method
+    * we need to handle creation
+* `**` python operator: turns dictionary into `key=value` format
