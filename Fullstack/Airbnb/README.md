@@ -491,3 +491,6 @@ python manage.py startapp rooms
 * `save()`: at this time, **you don't call `create()`**
     * the serializer knows that user is trying to update the data because `instance` argument is provided
 * dictionary's `get()` method: when you define `default` option (second parameter), `get`returns the `default` value when the key doesn't exist
+
+## 10.8 delete()
+* `rest_framework.status` has every status
