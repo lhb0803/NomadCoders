@@ -520,3 +520,18 @@ python manage.py startapp rooms
     * two options to show fields: include or excldue
         1. include: `fields = "__all__"`
         2. exclude: `exclude = (...,)`
+
+## 10.12 ModelViewSet
+* Hide all codes for developers ([reference](https://www.django-rest-framework.org/api-guide/viewsets/#viewset-actions))
+    * delete all previous codes
+* make class `CategoryViewSet` which inherits from `ModelViewSet`
+* `ModelViewSet` is smarter than our own code
+* at `urlpatterns`, map http methods with class methods like below code
+    ```python
+    path("", views.CategoryViewSet.as_view(
+        {
+            "get": "list",
+            "post": "create",
+        }
+    ))
+    ```
