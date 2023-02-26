@@ -535,3 +535,13 @@ python manage.py startapp rooms
         }
     ))
     ```
+
+## 10.13 Conclusions
+* More simploe code: [Routers](https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/)
+* `ReadOnlyModelViewSet()`: only `list` and `retrieve`
+* `mixins`: create own viewset ([reference](https://www.django-rest-framework.org/api-guide/viewsets/#custom-viewset-base-classes))
+* `ModelViewset` is great abstraction but makes code less explicit
+    * not appropriate for customizing
+        - ex1) only get photoes when the user is owner
+        - ex2) send emails when deleting
+* the instructor prefers `APIView` to `ModelViewset`
