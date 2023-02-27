@@ -545,3 +545,7 @@ python manage.py startapp rooms
         - ex1) only get photoes when the user is owner
         - ex2) send emails when deleting
 * the instructor prefers `APIView` to `ModelViewset`
+
+# 11. REST API
+## 11.0 All Amenities
+* id, created_at, updated_at is already read-only in ModelSerializer
