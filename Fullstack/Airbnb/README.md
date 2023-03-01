@@ -552,3 +552,6 @@ python manage.py startapp rooms
 
 ## 11.1 Amenity Detail
 * make `get_object()` to raise NotFound error
+
+## 11.2 Perks and PerkDetail
+* practice again

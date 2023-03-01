@@ -1,10 +1,9 @@
-
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound
 from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Room, Amenity
-from .serializer import AmenitySerializer
+from .serializers import AmenitySerializer
 
 class Amenities(APIView):
     def get(self, request):
