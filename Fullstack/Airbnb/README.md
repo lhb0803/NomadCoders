@@ -549,3 +549,6 @@ python manage.py startapp rooms
 # 11. REST API
 ## 11.0 All Amenities
 * id, created_at, updated_at is already read-only in ModelSerializer
+
+## 11.1 Amenity Detail
+* make `get_object()` to raise NotFound error
