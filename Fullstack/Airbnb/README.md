@@ -555,3 +555,11 @@ python manage.py startapp rooms
 
 ## 11.2 Perks and PerkDetail
 * practice again
+
+## 11.3 Rooms
+* Authentication, Relationship
+* when put object instead of ID (showing relationship with relationship)
+    * `depth = 1` at ModelSerializer
+    * But, most of time you don't need all data
+    * Take care how much data you need
+    * `depth = 1` is not customizable
