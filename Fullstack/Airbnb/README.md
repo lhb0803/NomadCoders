@@ -563,3 +563,10 @@ python manage.py startapp rooms
     * But, most of time you don't need all data
     * Take care how much data you need
     * `depth = 1` is not customizable
+
+## 11.4 Room Detail
+* Customize relationship expansion
+* How to tell Django our custom serializer
+    * at Serializer, import other models' serializer
+    * `owner = TinyUserSerializer()` at `RoomViewSerializer`
+    * if array, use `many = True`
