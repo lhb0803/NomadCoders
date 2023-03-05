@@ -581,3 +581,15 @@ python manage.py startapp rooms
     ```
     The `.create()` method does not support writable nested fields by default.
     ```
+
+## 11.6 Room Owner
+* when you post your data, if the format meets serializer, the serializer.is_valid() is true
+    * but because there's no exact data at DB, an error occurs
+    * `serializer.save()` -> `.create()` occurs error
+* You should write explicit create method
+* or make `read_only = True` -> still makes error because some field like `owner` is mandatory when make a room model
+* You should somehow find a way to **give serializer the information of `owner`**
+* request object has many methods - you can check with `dir()`
+* `owner = request.user` -> you should check if the requesting user is authenticated
+* `serializer.save(owner=request.user)`
+    * **`owner=requets.user` is added to `validated_data`**
