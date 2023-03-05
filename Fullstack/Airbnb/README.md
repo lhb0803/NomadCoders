@@ -570,3 +570,14 @@ python manage.py startapp rooms
     * at Serializer, import other models' serializer
     * `owner = TinyUserSerializer()` at `RoomViewSerializer`
     * if array, use `many = True`
+
+## 11.5 Create Room
+* create model when there is a relationship
+    * field that has relationship should be passed as dictionary
+* `owner` should be shape of `TinyUserSerializer`
+* but, **this data should not be passed through POST request data**
+    * make `owner` read-only
+* when you try to post and create room model with manual dictionary data, an error occurs
+    ```
+    The `.create()` method does not support writable nested fields by default.
+    ```
