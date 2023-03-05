@@ -597,3 +597,8 @@ python manage.py startapp rooms
 ## 11.7 Room Category
 * pass category id and make the serializer find it and use it to create a room model
 * search DB with category pk and pass the data to `serializer.save()`
+
+## 11.8 Room Amenities
+* how to handle list of pk (Many to Many field)
+* `room.amenities.add()` (different API with foreign key)
+* If only Amenities data is wrong, should the process terminated or just failing amenity adding silently: `except: pass`
