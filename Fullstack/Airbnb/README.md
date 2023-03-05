@@ -593,3 +593,7 @@ python manage.py startapp rooms
 * `owner = request.user` -> you should check if the requesting user is authenticated
 * `serializer.save(owner=request.user)`
     * **`owner=requets.user` is added to `validated_data`**
+
+## 11.7 Room Category
+* pass category id and make the serializer find it and use it to create a room model
+* search DB with category pk and pass the data to `serializer.save()`
