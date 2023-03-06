@@ -602,3 +602,16 @@ python manage.py startapp rooms
 * how to handle list of pk (Many to Many field)
 * `room.amenities.add()` (different API with foreign key)
 * If only Amenities data is wrong, should the process terminated or just failing amenity adding silently: `except: pass`
+
+## 11.9 Transactions
+* No Amenity error -> delete room
+    * bad logic: waste id
+* create and delete is redundant
+* Transaction: when code all succeed or all fail -> commit
+    ```python
+    from django.db import transaction
+
+    with transaction.atomic():
+        # for loop
+    ```
+* only add to db when the whole code runs without any problem
