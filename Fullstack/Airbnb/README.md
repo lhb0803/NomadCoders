@@ -615,3 +615,6 @@ python manage.py startapp rooms
         # for loop
     ```
 * only add to db when the whole code runs without any problem
+
+## 11.10 Delete Rooms
+* if you are not owner of the room, you cannot delete

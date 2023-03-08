@@ -1,7 +1,7 @@
 from django.db import transaction
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.exceptions import NotFound, NotAuthenticated, ParseError
+from rest_framework.exceptions import NotFound, NotAuthenticated, ParseError, PermissionDenied
 from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Room, Amenity
 from categories.models import Category
@@ -37,7 +37,8 @@ class AmenityView(APIView):
 
     def put(self, request, pk):
         amenity = self.get_object(pk)
-        serializer = AmenitySerializer(amenity, 
+        serializer = AmenitySerializer(
+            amenity, 
             data=request.data, 
             partial=True
         )
@@ -101,3 +102,58 @@ class RoomView(APIView):
         room = self.get_object(pk)
         serializer = RoomViewSerializer(room)
         return Response(serializer.data)
+
+    def put(self, request, pk):
+        room = self.get_object(pk)
+        if not request.user.is_authenticated:
+            raise NotAuthenticated
+        if room.owner != request.user:
+            raise PermissionDenied
+        serializer = RoomViewSerializer(
+            room,
+            data=request.data,
+            partial=True
+        )
+
+        if serializer.is_valid():
+            # category
+            category_pk = request.data.get("category")
+            if not category_pk:
+                raise ParseError("Category is required")
+            try:
+                category = Category.objects.get(pk=category_pk)
+                if category.kind == Category.CategoryKindChoices.EXPERIENCES:
+                    raise ParseError("The category kind should be rooms")
+            except Category.DoesNotExist:
+                raise ParseError("Category not found")
+            
+            # amenities
+            try:
+                with transaction.atomic():
+                    room = serializer.save(category=category)
+                    amenities = request.data.get("amenities")
+                    room.amenities.set([])
+                    for amenity_pk in amenities:
+                        amenity = Amenity.objects.get(pk=amenity_pk)
+                        room.amenities.add(amenity)
+                    serializer = RoomViewSerializer(room)
+                    return Response(serializer.data)
+
+            except Amenity.DoesNotExist:
+                raise ParseError("Amenity not found")
+
+
+        else:
+            return Response(serializer.errors)
+
+
+        
+
+    def delete(self, request, pk):
+        room = self.get_object(pk)
+        if not request.user.is_authenticated:
+            raise NotAuthenticated
+        if room.owner != request.user:
+            raise PermissionDenied
+        room.delete()
+        return Response(status=HTTP_204_NO_CONTENT)
