@@ -618,3 +618,13 @@ python manage.py startapp rooms
 
 ## 11.10 Delete Rooms
 * if you are not owner of the room, you cannot delete
+
+## 11.11 SerializerMethodField
+* calculated fields
+* rating
+* make method `get_{property_name}`
+    ```python
+    potato = serializers.SerializerMethodField()
+    def get_potato():
+        pass
+    ```
