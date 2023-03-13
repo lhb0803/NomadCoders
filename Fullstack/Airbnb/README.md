@@ -628,3 +628,13 @@ python manage.py startapp rooms
     def get_potato():
         pass
     ```
+
+## 11.12 Serializer Context
+* check the user owns the room or not
+* can send context to serializer
+    ```python
+    serializer = RoomViewSerializer(
+        room,
+        context={"request": request},
+    )
+    ```
