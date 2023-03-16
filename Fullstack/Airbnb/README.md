@@ -643,3 +643,12 @@ python manage.py startapp rooms
 * recall reverse accessor
     * A-FK(B) => B.A_set
 * pagination: if you have many many reviews, you should optimize calling data 
+
+## 11.14 Pagination
+* reverse accessor is not good idea when calling many data
+* Django includes pagination
+    * _?page=1_
+* set `page_size`
+* QuerySet is lazy: calls data at last
+
+* Homework: make amenities paginated
