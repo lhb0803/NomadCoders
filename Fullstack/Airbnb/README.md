@@ -638,3 +638,8 @@ python manage.py startapp rooms
         context={"request": request},
     )
     ```
+
+## 11.13 Reverse Serializers
+* recall reverse accessor
+    * A-FK(B) => B.A_set
+* pagination: if you have many many reviews, you should optimize calling data 
