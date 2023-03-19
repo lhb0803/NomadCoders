@@ -7,11 +7,20 @@ from .models import Room, Amenity
 from categories.models import Category
 from .serializers import AmenitySerializer, RoomListSerializer, RoomViewSerializer
 from reviews.serializers import ReviewSerializer
+from django.conf import settings
 
 class Amenities(APIView):
     def get(self, request):
+        try:
+            page = int(request.query_params.get("page", 1))
+        except ValueError:
+            page = 1
+
+        page_size = settings.PAGE_SIZE
+        start = (page - 1) * page_size
+        end = start + page_size
         all_amenities = Amenity.objects.all()
-        serializer = AmenitySerializer(all_amenities, many=True)
+        serializer = AmenitySerializer(all_amenities[start:end], many=True)
         return Response(serializer.data)
 
     def post(self, request):
@@ -177,7 +186,7 @@ class RoomReviews(APIView):
         except ValueError:
             page = 1
         
-        page_size = 3
+        page_size = settings.PAGE_SIZE
         start = (page - 1) * page_size
         end = start + page_size
         room = self.get_object(pk)

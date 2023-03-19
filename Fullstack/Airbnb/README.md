@@ -650,6 +650,7 @@ python manage.py startapp rooms
     * _?page=1_
 * set `page_size`
 * QuerySet is lazy: calls data at last
+* Homework: make amenities paginated
 
 ## 11.15 File Uploads
 * at `config/settings.py`, write `MEDIA_ROOT = "uploads"` then the upload directory changes
@@ -660,5 +661,3 @@ python manage.py startapp rooms
     from django.conf import settings
     ```
 * not very recommended: what you have done is letting your user to upload file next to your code
-
-* Homework: make amenities paginated
