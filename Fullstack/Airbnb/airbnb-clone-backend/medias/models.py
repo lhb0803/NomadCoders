@@ -2,7 +2,7 @@ from django.db import models
 from common.models import CommonModel
 
 class Photo(CommonModel):
-    file = models.ImageField()
+    file = models.URLField()
     description = models.CharField(max_length=140)
     room = models.ForeignKey(
         "rooms.Room",
@@ -23,7 +23,7 @@ class Photo(CommonModel):
         return "Photo File"
 
 class Video(CommonModel):
-    file = models.FileField()
+    file = models.URLField()
     description = models.CharField(max_length=140)
     experience = models.OneToOneField(
         "experiences.Experience",

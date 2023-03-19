@@ -661,3 +661,7 @@ python manage.py startapp rooms
     from django.conf import settings
     ```
 * not very recommended: what you have done is letting your user to upload file next to your code
+
+## 11.16 Upload Photo
+* later, will put photo to other server
+* Django will only get url of the file hosting server
