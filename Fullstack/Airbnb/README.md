@@ -665,3 +665,10 @@ python manage.py startapp rooms
 ## 11.16 Upload Photo
 * later, will put photo to other server
 * Django will only get url of the file hosting server
+
+## 11.17 permission_classes
+* can we DELETE from /api/v1/medias/photos/1 ?
+* from views in rooms? or in medias?
+* make it more organized
+* `permission_classes = [IsAuthenticated]` in `APIView`: can replace authentication
+* `permission_classes = [IsAuthenticatedOrReadOnly]` in `APIView`: only authenticated users can PUT, POST or DELETE
