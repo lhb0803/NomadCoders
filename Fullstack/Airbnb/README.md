@@ -690,3 +690,8 @@ python manage.py startapp rooms
     * `is_liked()`: toggle which adds or deletes room from your wishlist
 * If you write code `object in objects.all()`, you are unnecessarily calling all objects just to check whether it exists or not
     * Just your `.filter().exists()` for efficiency
+
+## 11.21 is_liked
+* show user if the room is in wishlist or not
+* `Wishlist.objects.filter(user=request.user, rooms__pk=room.pk)`:
+    * finds all wishlists that is made by request.user and contains the room 
