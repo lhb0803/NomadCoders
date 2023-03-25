@@ -672,3 +672,10 @@ python manage.py startapp rooms
 * make it more organized
 * `permission_classes = [IsAuthenticated]` in `APIView`: can replace authentication
 * `permission_classes = [IsAuthenticatedOrReadOnly]` in `APIView`: only authenticated users can PUT, POST or DELETE
+
+## 11.18 Reviews
+* POST design
+    * POST /rooms/1/reviews vs POST /api/v1/reviews
+    * the former is more appropriate because one can know which room you upload a photo to
+* to make a request valid without `user`
+    * make `user` read_only=True
