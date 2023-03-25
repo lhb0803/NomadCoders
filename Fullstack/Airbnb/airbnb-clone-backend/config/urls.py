@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rooms import views as room_views
 from django.conf.urls.static import static
 from django.conf import settings
 

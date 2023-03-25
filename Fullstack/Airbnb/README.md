@@ -722,9 +722,10 @@ python manage.py startapp rooms
 
 # 12. Users API
 * GET PUT /me
+* GET /users/username
 * POST /users
 * POST /users/log-in
-* POST /users/change-password
+* PUT /users/change-password
 
 ## 12.0 User Profile
 * Me APIView
@@ -732,3 +733,8 @@ python manage.py startapp rooms
 ## 12.1 Create User
 * `user.set_password(password)`: hash the password
 * only admin user can access to Admin Panel
+
+## 12.2 Change Password
+* be careful of order when make url `path("<str:username>")`
+* handle circluar import
+* password is hashed by Django

@@ -2,6 +2,14 @@ from rest_framework import serializers
 from .models import Review
 from users.serializers import TinyUserSerializer
 
+class TinyReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = (
+            "payload",
+            "rating"
+        )
+
 class ReviewSerializer(serializers.ModelSerializer):
     user = TinyUserSerializer(read_only=True)
 
@@ -12,4 +20,3 @@ class ReviewSerializer(serializers.ModelSerializer):
             "payload",
             "rating",
         )
-    
