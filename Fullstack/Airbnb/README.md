@@ -719,3 +719,12 @@ python manage.py startapp rooms
 * create serializer can be different from showing serializer
     * CreateRoomBookingSerializer()
     * PublicBookingSerializer()
+
+# 12. Users API
+* GET PUT /me
+* POST /users
+* POST /users/log-in
+* POST /users/change-password
+
+## 12.0 User Profile
+* Me APIView
