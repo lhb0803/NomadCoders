@@ -684,3 +684,9 @@ python manage.py startapp rooms
 * GET, POST, PUT
 * `RoomListSerializer` 'request' KeyError
     * To handle this error, you should pass `context={"request": request}` to `WishlistSerializer()`
+
+## 11.20 Wishlist
+* user will send PUT to add room for your wishlist
+    * `is_liked()`: toggle which adds or deletes room from your wishlist
+* If you write code `object in objects.all()`, you are unnecessarily calling all objects just to check whether it exists or not
+    * Just your `.filter().exists()` for efficiency
