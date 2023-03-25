@@ -708,4 +708,9 @@ python manage.py startapp rooms
 * **a little logic**: check check_in, check_out to validate booking
 * create another serializer
 * customize `serializer.is_valid()`
-    * create a method `validate_{field_name}()`
+    * create a method `validate_{field_name}(self, value)`
+
+## 11.24 Validate Booking
+* validate all fields together: `validate(self, data)`
+* logic checking already booked
+    * co >= a and ci <= b: already booked (from a to b)
