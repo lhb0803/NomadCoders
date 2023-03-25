@@ -728,3 +728,7 @@ python manage.py startapp rooms
 
 ## 12.0 User Profile
 * Me APIView
+
+## 12.1 Create User
+* `user.set_password(password)`: hash the password
+* only admin user can access to Admin Panel
