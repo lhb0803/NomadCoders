@@ -695,3 +695,12 @@ python manage.py startapp rooms
 * show user if the room is in wishlist or not
 * `Wishlist.objects.filter(user=request.user, rooms__pk=room.pk)`:
     * finds all wishlists that is made by request.user and contains the room 
+
+## 11.22 Bookings
+* Design consideration
+    * Do we need `get_object()` to call room's bookings?
+    * maybe not -> Trust the client to send available room_pk
+* filter with time
+    * use `django.utils.timezone`
+    * `.filter(check_in__gt=now)`
+    
