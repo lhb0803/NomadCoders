@@ -679,3 +679,8 @@ python manage.py startapp rooms
     * the former is more appropriate because one can know which room you upload a photo to
 * to make a request valid without `user`
     * make `user` read_only=True
+
+## 11.19 Wishlists
+* GET, POST, PUT
+* `RoomListSerializer` 'request' KeyError
+    * To handle this error, you should pass `context={"request": request}` to `WishlistSerializer()`
