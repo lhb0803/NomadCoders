@@ -703,4 +703,9 @@ python manage.py startapp rooms
 * filter with time
     * use `django.utils.timezone`
     * `.filter(check_in__gt=now)`
-    
+
+## 11.23 Create a Booking
+* **a little logic**: check check_in, check_out to validate booking
+* create another serializer
+* customize `serializer.is_valid()`
+    * create a method `validate_{field_name}()`
