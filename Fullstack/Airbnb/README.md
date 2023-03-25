@@ -714,3 +714,8 @@ python manage.py startapp rooms
 * validate all fields together: `validate(self, data)`
 * logic checking already booked
     * co >= a and ci <= b: already booked (from a to b)
+
+## 11.25 Booking Completed
+* create serializer can be different from showing serializer
+    * CreateRoomBookingSerializer()
+    * PublicBookingSerializer()
