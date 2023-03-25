@@ -738,3 +738,9 @@ python manage.py startapp rooms
 * be careful of order when make url `path("<str:username>")`
 * handle circluar import
 * password is hashed by Django
+
+## 12.3 Log In and Log Out
+* `from django.contrib.auth import authenticate, login, logout`
+* `authenticate`: authenticate user
+* `login`: login
+* `logout`: logout
