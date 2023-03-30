@@ -5,6 +5,24 @@ from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Experience, Perk
 from .serializers import PerkSerializer
 
+class Experiences(APIView):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        pass
+
+class ExperienceView(APIView):
+    def get(self, request, pk):
+        pass
+
+    def put(self, request, pk):
+        pass
+
+    def delete(self, request, pk):
+        pass
+
+
 class Perks(APIView):
     def get(self, request):
         all_perks = Perk.objects.all()
@@ -42,3 +60,20 @@ class PerkView(APIView):
         perk = self.get_object(pk)
         perk.delete()
         return Response(status=HTTP_204_NO_CONTENT)
+
+class Bookings(APIView):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        pass
+
+class BookingView(APIView):
+    def get(self, request, pk):
+        pass
+
+    def put(self, request, pk):
+        pass
+
+    def delete(self, request, pk):
+        pass
