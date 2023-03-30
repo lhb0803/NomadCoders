@@ -744,3 +744,13 @@ python manage.py startapp rooms
 * `authenticate`: authenticate user
 * `login`: login
 * `logout`: logout
+
+# 13.0 Code Challenge
+* experiences API
+    * GET POST /experience
+    * GET PUT DELETE /experiences/1
+    * GET /experiences/1/perks
+    * GET POST /perks
+    * GET PUT DELETE /perks/1
+    * GET POST /experiences/1/bookings
+    * GET PUT DELETE /experiences/1/bookings/2
