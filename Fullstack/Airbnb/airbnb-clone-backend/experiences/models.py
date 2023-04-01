@@ -28,6 +28,18 @@ class Experience(CommonModel):
     def __str__(self) -> str:
         return self.name
     
+    def rating_average(self):
+        reviews = self.reviews.all().values("rating")
+
+        if not reviews:
+            return "No Reviews"
+        else:
+            total_rating = 0
+            for review in reviews:
+                print(review)
+                total_rating += review['rating']
+            return f"{total_rating / len(reviews): .2f}"
+    
 class Perk(CommonModel):
     """
     What is included on an Experience
