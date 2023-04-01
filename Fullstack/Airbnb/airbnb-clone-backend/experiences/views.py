@@ -101,7 +101,9 @@ class ExperienceView(APIView):
             return Response(serializer.errors)
 
     def delete(self, request, pk):
-        pass
+        experience = self.get_object(pk)
+        experience.delete()
+        return Response(status=HTTP_204_NO_CONTENT)
 
 
 class Perks(APIView):

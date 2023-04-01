@@ -748,7 +748,7 @@ python manage.py startapp rooms
 # 13.0 Code Challenge
 * experiences API
     * GET POST /experiences [x]
-    * GET PUT DELETE /experiences/1
+    * GET PUT DELETE /experiences/1 [x]
     * GET /experiences/1/perks
     * GET POST /perks [x]
     * GET PUT DELETE /perks/1 [x]
