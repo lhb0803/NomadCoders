@@ -63,7 +63,42 @@ class ExperienceView(APIView):
         return Response(serializer.data)
 
     def put(self, request, pk):
-        pass
+        experience = self.get_object(pk)
+        serializer = ExperienceViewSerializer(
+            experience,
+            data=request.data,
+            partial=True,
+        )
+
+        if serializer.is_valid():
+            # category
+            category_pk = request.data.get("category")
+            if not category_pk:
+                raise ParseError("Category is required")
+            try:
+                category = Category.objects.get(pk=category_pk)
+                if category.kind == Category.CategoryKindChoices.ROOM:
+                    raise ParseError("The category kind should be experiences")
+            except Category.DoesNotExist:
+                raise ParseError("Category not found")
+            
+            # perks
+            try:
+                with transaction.atomic():
+                    experience = serializer.save(category=category)
+                    perks = request.data.get("perks")
+                    experience.perks.set([])
+                    for perk_pk in perks:
+                        perk = Perk.objects.get(pk=perk_pk)
+                        experience.perks.add(perk)
+                    serializer = ExperienceViewSerializer(experience)
+                    return Response(serializer.data)
+                    
+            except Perk.DoesNotExist:
+                raise ParseError("Perk not found")
+
+        else:
+            return Response(serializer.errors)
 
     def delete(self, request, pk):
         pass

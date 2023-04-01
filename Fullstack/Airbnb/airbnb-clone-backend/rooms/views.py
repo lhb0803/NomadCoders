@@ -128,8 +128,6 @@ class RoomView(APIView):
 
     def put(self, request, pk):
         room = self.get_object(pk)
-        if room.owner != request.user:
-            raise PermissionDenied
         serializer = RoomViewSerializer(
             room,
             data=request.data,
@@ -169,8 +167,6 @@ class RoomView(APIView):
 
     def delete(self, request, pk):
         room = self.get_object(pk)
-        if room.owner != request.user:
-            raise PermissionDenied
         room.delete()
         return Response(status=HTTP_204_NO_CONTENT)
 
