@@ -7,6 +7,7 @@ from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Experience, Perk
 from categories.models import Category
 from .serializers import ExperienceListSerializer, ExperienceViewSerializer, PerkSerializer
+from django.conf import settings
 
 class Experiences(APIView):
     def get(self, request):
@@ -104,6 +105,31 @@ class ExperienceView(APIView):
         experience = self.get_object(pk)
         experience.delete()
         return Response(status=HTTP_204_NO_CONTENT)
+
+class ExperiencePerks(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get_object(self, pk):
+        try:
+            return Experience.objects.get(pk=pk)
+        except Experience.DoesNotExist:
+            raise NotFound
+
+    def get(self, request, pk):
+        try:
+            page = int(request.query_params.get("page", 1))
+        except ValueError:
+            page = 1
+
+        page_size = settings.PAGE_SIZE
+        start = (page - 1) * page_size
+        end = start + page_size
+        experience = self.get_object(pk)
+        serializer = PerkSerializer(
+            experience.perks.all()[start:end],
+            many=True,
+        )
+        return Response(serializer.data)
 
 
 class Perks(APIView):
