@@ -20,7 +20,7 @@ class Booking(CommonModel):
     check_out = models.DateField(null=True, blank=True)
 
     # for Experience booking
-    experience_time = models.DateTimeField(null=True, blank=True)
+    experience_date = models.DateField(null=True, blank=True)
 
     def __str__(self) -> str:
         return f"{self.kind.title()} booking by {self.user}"

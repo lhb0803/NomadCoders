@@ -6,8 +6,11 @@ from rest_framework.exceptions import NotFound, ParseError
 from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Experience, Perk
 from categories.models import Category
+from bookings.models import Booking
+from bookings.serializers import PublicBookingSerializer, CreateExperienceBookingSerializer
 from .serializers import ExperienceListSerializer, ExperienceViewSerializer, PerkSerializer
 from django.conf import settings
+from django.utils import timezone
 
 class Experiences(APIView):
     def get(self, request):
@@ -171,18 +174,44 @@ class PerkView(APIView):
         return Response(status=HTTP_204_NO_CONTENT)
 
 class Bookings(APIView):
-    def get(self, request):
-        pass
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
-    def post(self, request):
-        pass
+    def get_object(self, pk):
+        try:
+            return Experience.objects.get(pk=pk)
+        except Experience.DoesNotExist:
+            raise NotFound
+    
+    def get(self, request, pk):
+        now = timezone.localtime(timezone.now()).date()
+        bookings = Booking.objects.filter(
+            experience__pk=pk,
+            kind=Booking.BookingKindChoices.EXPERIENCE,
+            experience_date__gte=now,
+        )
+        serializer = PublicBookingSerializer(bookings, many=True)
+        return Response(serializer.data)
+
+    def post(self, request, pk):
+        experience = self.get_object(pk)
+        serializer = CreateExperienceBookingSerializer(data=request.data)
+        if serializer.is_valid():
+            booking = serializer.save(
+                experience=experience,
+                user=request.user,
+                kind=Booking.BookingKindChoices.EXPERIENCE,
+            )
+            serializer = PublicBookingSerializer(booking)
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
 
 class BookingView(APIView):
-    def get(self, request, pk):
+    def get(self, request, pk, booking_pk):
         pass
 
-    def put(self, request, pk):
+    def put(self, request, pk, booking_pk):
         pass
 
-    def delete(self, request, pk):
+    def delete(self, request, pk, booking_pk):
         pass

@@ -9,7 +9,7 @@ class BookingAdmin(admin.ModelAdmin):
         "guests",
         "room", "experience",
         "check_in", "check_out",
-        "experience_time",
+        "experience_date",
     )
 
     list_filter = (

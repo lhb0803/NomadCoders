@@ -41,6 +41,33 @@ class CreateRoomBookingSerializer(serializers.ModelSerializer):
 
         return data
 
+class CreateExperienceBookingSerializer(serializers.ModelSerializer):
+    
+    # override to make mandatory fields
+    experience_date = serializers.DateField()
+
+    class Meta:
+        model = Booking
+        fields = (
+            "experience_date",
+            "guests",
+        )
+    
+    def validate_experience_date(self, value):
+        now = timezone.localtime(timezone.now()).date()
+        if value >= now:
+            return value
+        else:
+            raise serializers.ValidationError("Cant' book in the past!")
+
+    def validate(self, data):
+        experience_date = data["experience_date"]
+
+        if Booking.objects.filter(experience_date__exact=experience_date).exists():
+            raise serializers.ValidationError("Already booked.")
+
+        return data
+
 class PublicBookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
@@ -48,6 +75,6 @@ class PublicBookingSerializer(serializers.ModelSerializer):
             "pk",
             "check_in",
             "check_out",
-            "experience_time",
+            "experience_date",
             "guests",
         )
