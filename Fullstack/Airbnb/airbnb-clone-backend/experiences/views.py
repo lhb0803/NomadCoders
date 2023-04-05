@@ -7,7 +7,7 @@ from rest_framework.status import HTTP_204_NO_CONTENT
 from .models import Experience, Perk
 from categories.models import Category
 from bookings.models import Booking
-from bookings.serializers import PublicBookingSerializer, CreateExperienceBookingSerializer
+from bookings.serializers import PublicBookingSerializer, CreateExperienceBookingSerializer, UpdateExperienceBookingSerializer
 from .serializers import ExperienceListSerializer, ExperienceViewSerializer, PerkSerializer
 from django.conf import settings
 from django.utils import timezone
@@ -207,11 +207,45 @@ class Bookings(APIView):
             return Response(serializer.errors)
 
 class BookingView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get_experience(self, experience_pk):
+        try:
+            experience = Experience.objects.get(pk=experience_pk)
+            return experience
+        except Experience.DoesNotExist:
+            raise NotFound
+
+    def get_object(self, experience_pk, booking_pk):
+        try:
+            booking = Booking.objects.get(pk=booking_pk)
+            if booking.experience.pk != experience_pk:
+                raise NotFound
+            return booking
+        except Booking.DoesNotExist:
+            raise NotFound
+
     def get(self, request, pk, booking_pk):
-        pass
+        booking = self.get_object(experience_pk=pk, booking_pk=booking_pk)
+        return Response(PublicBookingSerializer(booking).data)
 
     def put(self, request, pk, booking_pk):
-        pass
+        booking = self.get_object(experience_pk=pk, booking_pk=booking_pk)
+        experience = self.get_experience(experience_pk=pk)
+
+        serializer = UpdateExperienceBookingSerializer(booking, data=request.data)
+        if serializer.is_valid():
+            booking = serializer.save(
+                experience=experience,
+                user=request.user,
+                kind=Booking.BookingKindChoices.EXPERIENCE,
+            )
+            serializer = PublicBookingSerializer(booking)
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
 
     def delete(self, request, pk, booking_pk):
-        pass
+        booking = self.get_object(experience_pk=pk, booking_pk=booking_pk)
+        booking.delete()
+        return Response(status=HTTP_204_NO_CONTENT)

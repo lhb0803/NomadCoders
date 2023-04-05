@@ -68,6 +68,22 @@ class CreateExperienceBookingSerializer(serializers.ModelSerializer):
 
         return data
 
+class UpdateExperienceBookingSerializer(CreateExperienceBookingSerializer):
+    class Meta:
+        model = Booking
+        fields = (
+            "pk",
+            "experience_date",
+            "guests",
+        )
+    
+    def validate(self, data):
+        experience_date = data["experience_date"]
+        if Booking.objects.filter(experience_date__exact=experience_date).exclude(pk__exact=self.instance.pk).exists():
+            raise serializers.ValidationError("Already booked.")
+        
+        return data
+
 class PublicBookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
