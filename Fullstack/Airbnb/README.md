@@ -757,4 +757,5 @@ python manage.py startapp rooms
 
 # 14. GraphQL API
 ## 14.0 Introduction
-* 
+* Strawberry library
+* Most Django Framework uses REST API, so it is not mandatory to learn GraphQL API with Django
