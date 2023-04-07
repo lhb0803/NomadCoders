@@ -759,3 +759,10 @@ python manage.py startapp rooms
 ## 14.0 Introduction
 * Strawberry library
 * Most Django Framework uses REST API, so it is not mandatory to learn GraphQL API with Django
+
+## 14.1 Query
+* GraphQL quick explanation: [youtube link](https://www.youtube.com/watch?v=EkWI6Ru8lFQ)
+* Install Strawberry extensions
+* dummy graphql API without Django
+* Python is available for typing -> **strawberry makes it mandatory**
+* You should **add decorator `@strawberry.field` to make the method as a field**
