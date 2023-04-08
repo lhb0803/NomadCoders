@@ -766,3 +766,7 @@ python manage.py startapp rooms
 * dummy graphql API without Django
 * Python is available for typing -> **strawberry makes it mandatory**
 * You should **add decorator `@strawberry.field` to make the method as a field**
+
+## 14.2 Query Arguments
+* `typing` library
+* Learn how to ask for argument for query
