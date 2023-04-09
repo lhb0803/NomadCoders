@@ -770,3 +770,6 @@ python manage.py startapp rooms
 ## 14.2 Query Arguments
 * `typing` library
 * Learn how to ask for argument for query
+
+## 14.3 Mutation
+* `strarwberry.mutation`
