@@ -773,3 +773,7 @@ python manage.py startapp rooms
 
 ## 14.3 Mutation
 * `strarwberry.mutation`
+
+## 14.4 Refactor
+* Divde and conquer
+* move class method, outside
