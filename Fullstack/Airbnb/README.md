@@ -777,3 +777,6 @@ python manage.py startapp rooms
 ## 14.4 Refactor
 * Divde and conquer
 * move class method, outside
+
+## 14.5 Django Types
+* `strawberr.auto` states data type automatically
