@@ -779,4 +779,8 @@ python manage.py startapp rooms
 * move class method, outside
 
 ## 14.5 Django Types
-* `strawberr.auto` states data type automatically
+* `strawberry.auto` states data type automatically
+
+## 14.6 Type Relationships
+* in `RoomType`, declare `owner: "UserType"`
+    * you should import `UserType` from `users.types`
