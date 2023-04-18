@@ -784,3 +784,6 @@ python manage.py startapp rooms
 ## 14.6 Type Relationships
 * in `RoomType`, declare `owner: "UserType"`
     * you should import `UserType` from `users.types`
+
+## 14.7 Paginated Relationships
+* you can create dynamic methods through strawberry
