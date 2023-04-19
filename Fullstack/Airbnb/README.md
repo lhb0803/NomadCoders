@@ -787,3 +787,10 @@ python manage.py startapp rooms
 
 ## 14.7 Paginated Relationships
 * you can create dynamic methods through strawberry
+
+## 14.8 Custom Resolvers
+* how to handel error in strawberry
+    * we should choose message to show users
+    * `typing.Optional[]`
+* info parameter
+    * `strawberry.types.Info`: contains request object
