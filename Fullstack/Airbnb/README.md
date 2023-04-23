@@ -794,3 +794,7 @@ python manage.py startapp rooms
     * `typing.Optional[]`
 * info parameter
     * `strawberry.types.Info`: contains request object
+
+## 14.9 Permissions
+* you should ask for request object explicitly to strawberry
+* in `schema.py`, specify `permission_classes` in certain `strawberry.field()`
