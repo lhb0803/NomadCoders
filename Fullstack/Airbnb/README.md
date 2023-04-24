@@ -798,3 +798,7 @@ python manage.py startapp rooms
 ## 14.9 Permissions
 * you should ask for request object explicitly to strawberry
 * in `schema.py`, specify `permission_classes` in certain `strawberry.field()`
+
+## 14.10 Code Challenge
+* Mutation which allows user to create room
+    * divide and conquer
