@@ -802,3 +802,11 @@ python manage.py startapp rooms
 ## 14.10 Code Challenge
 * Mutation which allows user to create room
     * divide and conquer
+
+# Authentication
+## 15.0 Introduction
+* Create own custom authentication token
+* Perform JWT authentication
+* Django automatically uses cookie when authenticating users
+* Install software [postman](https://www.postman.com/)
+    * to simulate sending request from iOS or Android
