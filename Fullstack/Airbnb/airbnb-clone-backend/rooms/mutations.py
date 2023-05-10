@@ -4,7 +4,6 @@ import typing
 
 
 def add_room(info: Info, name: str, price: int, rooms: int, toilets: int):
-    # print(name)
     new_room = models.Room(
         name=name, 
         price=price,
@@ -14,6 +13,3 @@ def add_room(info: Info, name: str, price: int, rooms: int, toilets: int):
     )
     new_room.save()
     return new_room
-
-def update_room():
-    return

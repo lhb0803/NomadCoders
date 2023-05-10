@@ -19,7 +19,3 @@ class Mutation:
         resolver=mutations.add_room,
         permission_classes=[OnlyLoggedIn],
     )
-    update_room: typing.Optional[types.RoomType] = strawberry.mutation(
-        resolver=mutations.update_room,
-        # permission_classes=[OnlyLoggedIn],
-    )
