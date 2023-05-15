@@ -810,3 +810,10 @@ python manage.py startapp rooms
 * Django automatically uses cookie when authenticating users
 * Install software [postman](https://www.postman.com/)
     * to simulate sending request from iOS or Android
+
+## 15.1 Custom Authentication
+* `REST_FRAMEWORK` in settings.py
+* Your authentication instance is built before you call APIView instance
+* Use postman to send GET request
+    * at Headers: "Truest-me": "hyobae"
+* at `BaseAuthentication` class, you should return tuple
