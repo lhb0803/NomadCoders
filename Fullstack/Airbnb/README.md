@@ -817,3 +817,10 @@ python manage.py startapp rooms
 * Use postman to send GET request
     * at Headers: "Truest-me": "hyobae"
 * at `BaseAuthentication` class, you should return tuple
+
+## 15.2 Recap
+* Behind the curtain of authentication
+* You can customize authentication with inheriting `BaseAuthentication` class
+    * How you can authenticate user
+* in `settings.py` add the class you made to `DEFAULT_AUTHENTICATION_CLASSES`
+    * Very weak at security, so it is never recommended to build your own authentication
