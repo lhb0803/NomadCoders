@@ -824,3 +824,17 @@ python manage.py startapp rooms
     * How you can authenticate user
 * in `settings.py` add the class you made to `DEFAULT_AUTHENTICATION_CLASSES`
     * Very weak at security, so it is never recommended to build your own authentication
+
+## 15.3 Token Authentication
+* install `rest_framework.authtoken` to `settings.py`
+* Make an API to create token
+    * `rest_framework.authtoken.views.obtain_auth_token`
+* Token Authentication Rule
+    ```
+    Header
+    {
+        Key: "Authorization", Value: "Token {token_value}"
+    }
+    ```
+* Explain how token authentication works by reading source code of `obtain_auth_token`
+    * You can build your own token authentication (ex. KakaoTalk, Github login)
