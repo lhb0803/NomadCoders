@@ -838,3 +838,15 @@ python manage.py startapp rooms
     ```
 * Explain how token authentication works by reading source code of `obtain_auth_token`
     * You can build your own token authentication (ex. KakaoTalk, Github login)
+
+## 15.4 JWT Encode
+* JWT(JSON Web Token) doesn't take space in database unlike Auth Token
+* JWT has encoded information
+* Auth Token has Key-Value relationship
+* JWT has user information
+    - you cannot force logout user
+* install `PyJWT`
+    ```
+    poetry add pyjwt
+    ```
+* JWT can be decoded - security weakness
