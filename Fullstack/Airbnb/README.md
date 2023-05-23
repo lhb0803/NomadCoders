@@ -881,3 +881,7 @@ python manage.py startapp rooms
 ## 16.0 Introduction
 * So far: Browser Manual testing 
 * we will use `python manage.py test` to use test codes
+
+## 16.1 Our First Test
+* `APITestCase`
+    * method should start with prefix "`test_`"
