@@ -885,3 +885,9 @@ python manage.py startapp rooms
 ## 16.1 Our First Test
 * `APITestCase`
     * method should start with prefix "`test_`"
+
+## 16.2 Amenities Test
+* GET request handler
+* `APITestCase` has a lot of methods that are useful (starts with `assert`)
+* Django test framework creates tes database and destroys it
+    * method `setUp` can define database for testing
