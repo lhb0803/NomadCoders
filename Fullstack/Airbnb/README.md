@@ -876,3 +876,8 @@ python manage.py startapp rooms
 * Other third party apps for token authentication: 
     - Better Security: `django-rest-knox`
     - Simpler: `djangorestframework-simplejwt`
+
+# 16.0 API Testing
+## 16.0 Introduction
+* So far: Browser Manual testing 
+* we will use `python manage.py test` to use test codes
