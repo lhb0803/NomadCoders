@@ -850,3 +850,6 @@ python manage.py startapp rooms
     poetry add pyjwt
     ```
 * JWT can be decoded - security weakness
+
+## 15.5 JWT Decode
+* make class `JWTAuthentication` and use `jwt.decode()`
