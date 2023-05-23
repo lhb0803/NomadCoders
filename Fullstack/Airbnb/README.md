@@ -853,3 +853,26 @@ python manage.py startapp rooms
 
 ## 15.5 JWT Decode
 * make class `JWTAuthentication` and use `jwt.decode()`
+
+## 15.6 Environment Files
+* you should Hide `SECRET_KEY` in source code for security!
+* Create .env file and hide it from git (add to .gitignore file)
+* Add django-envrionment
+    ```
+    poetry add django-environ
+    ```
+* add .env path with this script
+    ```python
+    from pathlib import Path
+    import os
+    import environ
+
+    env = environ.Env()
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
+
+    SECRET_KEY = env("SECRET_KEY")
+    ```
+* Other third party apps for token authentication: 
+    - Better Security: `django-rest-knox`
+    - Simpler: `djangorestframework-simplejwt`
