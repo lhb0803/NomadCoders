@@ -891,3 +891,7 @@ python manage.py startapp rooms
 * `APITestCase` has a lot of methods that are useful (starts with `assert`)
 * Django test framework creates tes database and destroys it
     * method `setUp` can define database for testing
+
+## 16.3 Create Amenity Test
+* POST request handler
+
