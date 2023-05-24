@@ -35,3 +35,38 @@ class TestAmenities(APITestCase):
 
         wrong_response = self.client.post(self.URL)
         self.assertEqual(wrong_response.status_code, 400, "Status code isn't 400.")
+
+
+class TestAmenity(APITestCase):
+    NAME = "Test Amenity"
+    DESC = "Test Description"
+    URL = "/api/v1/rooms/amenities/{pk}"
+
+    def setUp(self):
+        models.Amenity.objects.create(
+            name=self.NAME,
+            description=self.DESC
+        )
+    
+    def test_amenity_not_found(self):
+        wrong_response = self.client.get(self.URL.format(pk=2))
+        self.assertEqual(wrong_response.status_code, 404)
+
+    def test_get_amenity(self):
+        response = self.client.get(self.URL.format(pk=1))
+        self.assertEqual(response.status_code, 200)
+
+        data = response.json()
+        self.assertEqual(data["name"], self.NAME)
+        self.assertEqual(data["description"], self.DESC)
+    
+    def test_put_amenity(self):
+        amended_amenity_name = "Amended Name"
+        amended_amenity_description = "Amended Description"
+        response = self.client.put(self.URL.format(pk=1), data={"name": amended_amenity_name, "description": amended_amenity_description})
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_delete_amenity(self):
+        response = self.client.delete(self.URL.format(pk=1))
+        self.assertEqual(response.status_code, 204)

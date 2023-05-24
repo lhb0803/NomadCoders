@@ -895,3 +895,5 @@ python manage.py startapp rooms
 ## 16.3 Create Amenity Test
 * POST request handler
 
+## 16.4 Amenity Detail Test
+* GET single amenity test
