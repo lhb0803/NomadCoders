@@ -897,3 +897,8 @@ python manage.py startapp rooms
 
 ## 16.4 Amenity Detail Test
 * GET single amenity test
+
+## 16.5 Test Authentication
+* `Rooms`' permission_classes are `[IsAuthenticatedOrReadOnly]`
+    * So you can try Authentication Test
+* To log-in you should create user in your test case
