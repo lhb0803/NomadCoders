@@ -803,7 +803,7 @@ python manage.py startapp rooms
 * Mutation which allows user to create room
     * divide and conquer
 
-# Authentication
+# 15. Authentication
 ## 15.0 Introduction
 * Create own custom authentication token
 * Perform JWT authentication
@@ -877,7 +877,7 @@ python manage.py startapp rooms
     - Better Security: `django-rest-knox`
     - Simpler: `djangorestframework-simplejwt`
 
-# 16.0 API Testing
+# 16. API Testing
 ## 16.0 Introduction
 * So far: Browser Manual testing 
 * we will use `python manage.py test` to use test codes
@@ -902,3 +902,8 @@ python manage.py startapp rooms
 * `Rooms`' permission_classes are `[IsAuthenticatedOrReadOnly]`
     * So you can try Authentication Test
 * To log-in you should create user in your test case
+
+# 17. Front-End Setup
+## 17.0 Introduction
+* ReactJS, Chakra UI
+* Chakra UI is awesome
