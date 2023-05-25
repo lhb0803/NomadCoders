@@ -909,6 +909,8 @@ python manage.py startapp rooms
 * Chakra UI is awesome
 
 ## 17.1 Requirements
-* Basics
+* Basics of ReachJS
     * jsx, state, props, component
     * How to fetch data in ReactJS
+* Basics of Typescript
+    * types, interfaces, generics
