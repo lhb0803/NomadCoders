@@ -907,3 +907,8 @@ python manage.py startapp rooms
 ## 17.0 Introduction
 * ReactJS, Chakra UI
 * Chakra UI is awesome
+
+## 17.1 Requirements
+* Basics
+    * jsx, state, props, component
+    * How to fetch data in ReactJS
