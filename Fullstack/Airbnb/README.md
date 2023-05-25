@@ -914,3 +914,29 @@ python manage.py startapp rooms
     * How to fetch data in ReactJS
 * Basics of Typescript
     * types, interfaces, generics
+
+## 17.2 Setup
+* Start!
+    ```
+    npx create-react-app airbnb-clone-frontend --template=typescript
+    ```
+* Chakra UI install [official page](https://chakra-ui.com/getting-started)
+    ```
+    npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+    ```
+* reactouter-dom [official page](https://reactrouter.com/en/main)
+    ```
+    npm i react-router-dom
+    ```
+* start!
+    ```
+    npm run start
+    ```
+* Chakra UI has awsome various props
+    ```typescript
+    function App() {
+    return <div>
+        <Text color={"red.500"} fontSize={"6xl"}>It works!</Text>  
+    </div>;
+    }
+    ```
