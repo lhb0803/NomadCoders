@@ -985,3 +985,6 @@ python manage.py startapp rooms
 ## 18.1 Login Modal
 * You can specify state using `useDisclosure()`
 * Chakra provides beautiful predefiend component suchas `Modal`, `ModalOverlay`, ...
+
+## 18.2 Sign Up Modal
+* Separate each component
