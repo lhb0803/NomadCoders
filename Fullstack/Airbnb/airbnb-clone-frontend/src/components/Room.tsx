@@ -15,7 +15,9 @@ export default function Room(){
         <Text as="b" fontSize="md" noOfLines={1}>
           Oasis: English rock band formed in Manchester in 1991
         </Text>
-        <HStack>
+        <HStack _hover={{
+            color:"gray.500"
+          }} spacing={1} alignItems="center">
           <FaStar size="15px"/>
           <Text>5.0</Text>
         </HStack>

@@ -1011,3 +1011,14 @@ python manage.py startapp rooms
     * `base` is for mobile
     * `lg` is for larger screen
 * Separate Room Component
+
+## 19.6 Skeletons
+* https://chakra-ui.com/docs/components/skeleton
+    * (Look Professional)
+    ```typescript
+    <Box>
+        <Skeleton height={280} rounded={"xl"} mb={2}/>
+        <SkeletonText noOfLines={3}/>
+    </Box>
+    ```
+* Hover over state
