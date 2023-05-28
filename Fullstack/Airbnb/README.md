@@ -955,3 +955,12 @@ python manage.py startapp rooms
 * first Chakra experience
 * Chakra UI has Pre-defined styles
     * `<VStack>`, `<HStack>`, `<Heading>`, ...
+
+## 17.5 Chakra Tour
+* https://chakra-ui.com/docs/components
+* Button: color, size, icon, ...
+* Input: Login form, Addon, 
+* Drawer
+* Menu
+* Modal
+* Layout: Stack
