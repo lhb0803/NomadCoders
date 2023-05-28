@@ -988,3 +988,14 @@ python manage.py startapp rooms
 
 ## 18.2 Sign Up Modal
 * Separate each component
+
+## 18.3 Dark Mode
+* create `theme.ts`
+    ```typescript
+    const config: ThemeConfig = {
+        initialColorMode: "light",
+        useSystemColorMode: true // use OS default theme
+    }
+    ```
+* `useColorModeValue`: chakra Hook that allows user to use theme color
+    * You don't have to write if-else statement
