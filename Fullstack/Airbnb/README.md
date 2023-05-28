@@ -1012,7 +1012,7 @@ python manage.py startapp rooms
     * `lg` is for larger screen
 * Separate Room Component
 
-## 19.6 Skeletons
+## 18.6 Skeletons
 * https://chakra-ui.com/docs/components/skeleton
     * (Look Professional)
     ```typescript
@@ -1022,3 +1022,14 @@ python manage.py startapp rooms
     </Box>
     ```
 * Hover over state
+
+# 19.0 React Query
+* Connect Frontend with Backend
+## 19.0 Manual Fetching
+* CORS errors: your server don't allow fetching
+    * handle with installing [django-cors-headers](https://pypi.org/project/django-cors-headers/)
+        ```
+        poetry add django-cors-headers
+        ```
+* Typescript grammar
+    * When you fetch data, you should specity data type with `interface`
