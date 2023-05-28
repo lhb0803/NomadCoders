@@ -1004,3 +1004,10 @@ python manage.py startapp rooms
 * You can use `Grid` Chakra component to decorate
 * Need to be familiar with HTML and CSS grammar
 
+## 18.5 Responsive Design
+* Add a heart button on Image
+* Responsive design
+    * send object to `templateColumns`
+    * `base` is for mobile
+    * `lg` is for larger screen
+* Separate Room Component

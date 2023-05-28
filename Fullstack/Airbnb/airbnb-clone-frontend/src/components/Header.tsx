@@ -10,7 +10,21 @@ export default function Header() {
   const logoColor = useColorModeValue("red.500", "red.200");
   const Icon = useColorModeValue(FaMoon, FaSun)
   return (
-    <HStack justifyContent={"space-between"} py={5} px={10} borderBottomWidth={1}>
+    <HStack 
+      justifyContent={"space-between"} 
+      alignItems={"center"}
+      py={5} 
+      px={10} 
+      direction={{
+        sm: "column",
+        md: "row"
+      }}
+      spacing={{
+        sm: 4,
+        md: 6
+      }}
+      borderBottomWidth={1}
+    >
       <Box color={logoColor}>
         <FaAirbnb size={"48"}/>
       </Box>
