@@ -940,3 +940,11 @@ python manage.py startapp rooms
     </div>;
     }
     ```
+
+## 17.3 Router Setup
+* react-router-dom
+* Explains react-router what our URL in browser shows
+    * -> Choose What components to show to users
+* all URL but room has their parent URL
+* To use react component, you should write extension as .tsx (not .ts)
+* `<Outlet />` renders child currently matching with URL
