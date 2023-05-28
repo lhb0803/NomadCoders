@@ -964,3 +964,20 @@ python manage.py startapp rooms
 * Menu
 * Modal
 * Layout: Stack
+
+# 18. Chakra UI
+## 18.0 Header
+* Use Icons [link](https://react-icons.github.io/react-icons/)
+    ```
+    npm install react-icons --save
+    ```
+* Use fontawesome icons
+    ```typescript
+    import { IconName } from "react-icons/fa";
+    ```
+* You can find default value in Chakra UI official page's [Default Theme](https://chakra-ui.com/docs/styled-system/theme)
+    * You can get consistency
+    * **rem**: Very nice for measurement unit for responsive design (1rem = 16px)
+* `p`: shortcut for `padding`
+    * `py`: vertical padding
+    * `px`: horiontal padding
