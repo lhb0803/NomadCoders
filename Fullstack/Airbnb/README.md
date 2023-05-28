@@ -983,4 +983,5 @@ python manage.py startapp rooms
     * `px`: horiontal padding
 
 ## 18.1 Login Modal
-* 
+* You can specify state using `useDisclosure()`
+* Chakra provides beautiful predefiend component suchas `Modal`, `ModalOverlay`, ...
