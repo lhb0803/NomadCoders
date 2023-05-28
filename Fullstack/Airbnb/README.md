@@ -999,3 +999,8 @@ python manage.py startapp rooms
     ```
 * `useColorModeValue`: chakra Hook that allows user to use theme color
     * You don't have to write if-else statement
+
+## 18.4 Rooms Grid
+* You can use `Grid` Chakra component to decorate
+* Need to be familiar with HTML and CSS grammar
+
