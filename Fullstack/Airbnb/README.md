@@ -948,3 +948,10 @@ python manage.py startapp rooms
 * all URL but room has their parent URL
 * To use react component, you should write extension as .tsx (not .ts)
 * `<Outlet />` renders child currently matching with URL
+
+## 17.4 Not Found Page
+* 404 page
+* `createBrowserRouter` had good property called `errorElement` which shows up when page is not found
+* first Chakra experience
+* Chakra UI has Pre-defined styles
+    * `<VStack>`, `<HStack>`, `<Heading>`, ...
