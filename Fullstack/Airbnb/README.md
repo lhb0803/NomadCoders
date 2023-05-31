@@ -1036,3 +1036,13 @@ python manage.py startapp rooms
 
 ## 19.1 Recap
 * Server should be **fetchable**
+
+## 19.2 React Query
+* TanStack Query (a.k.a React Query)
+    * allow you to fetch in nice way
+    * install
+        ```
+        npm i @tanstack/react-query
+        ```
+* React Query provides caching
+    * Makes application faster
