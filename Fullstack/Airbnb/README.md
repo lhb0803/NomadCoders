@@ -1033,3 +1033,6 @@ python manage.py startapp rooms
         ```
 * Typescript grammar
     * When you fetch data, you should specity data type with `interface`
+
+## 19.1 Recap
+* Server should be **fetchable**

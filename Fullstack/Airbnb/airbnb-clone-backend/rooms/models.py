@@ -45,7 +45,6 @@ class Room(CommonModel):
         else:
             total_rating = 0
             for review in reviews:
-                print(review)
                 total_rating += review['rating']
             return f"{total_rating / len(reviews): .2f}"
 
