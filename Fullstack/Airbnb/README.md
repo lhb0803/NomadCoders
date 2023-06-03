@@ -1068,3 +1068,13 @@ python manage.py startapp rooms
         ```
         * it saves data in `"dataName"` with using `fetchFunction()`
 3. make `getRoom()` function in `api.ts`
+
+## 19.5 Devtools and Query Keys
+* Install Devtools for tansatack/react-query
+    * for debugging: you can figure out how the Query works and saves data
+    * install
+        ```
+        npm i @tanstack/react-query-devtools
+        ```
+    * add `<ReactQueryDevtools />` at `Root.tsx` to use DevTools for all pages
+* Learn How to send variables to Query Funciton
