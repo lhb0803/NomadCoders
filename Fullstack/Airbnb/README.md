@@ -1046,3 +1046,13 @@ python manage.py startapp rooms
         ```
 * React Query provides caching
     * Makes application faster
+
+## 19.3 Axios
+* recap React Query
+    * The page is not refreshed because it is cached in data `["rooms"]` (in memory of browser)
+* still fetch -> check whether the URL is right, response, json, ...
+* Install axios
+    ```
+    npm i axios
+    ```
+* axios will fetch and get json from it by `get()`
