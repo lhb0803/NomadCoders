@@ -1056,3 +1056,15 @@ python manage.py startapp rooms
     npm i axios
     ```
 * axios will fetch and get json from it by `get()`
+
+## 19.4 Room Detail
+* make Room component clickable and practice ReactQuery for fetching data
+1. make Link
+    * surround `<Vstack>` with `<Link>` (from `react-router` not `chakra-ui`)
+2. make `RoomDetail` routes
+    * `useQuery()` syntax
+        ```typescript
+        const { isLoading, data } = useQuery(["dataName"], fetchFunction);
+        ```
+        * it saves data in `"dataName"` with using `fetchFunction()`
+3. make `getRoom()` function in `api.ts`
