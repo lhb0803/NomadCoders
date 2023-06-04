@@ -1078,3 +1078,7 @@ python manage.py startapp rooms
         ```
     * add `<ReactQueryDevtools />` at `Root.tsx` to use DevTools for all pages
 * Learn How to send variables to Query Funciton
+
+## 19.6 Photos Grid
+* Building Room Detail UI
+* `<Grid>` and `<GridItem>`
