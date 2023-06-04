@@ -1082,3 +1082,7 @@ python manage.py startapp rooms
 ## 19.6 Photos Grid
 * Building Room Detail UI
 * `<Grid>` and `<GridItem>`
+
+## 19.7 Reviews
+* `<Avatar>` has many features
+* `getRoomReviews` at `api.ts`

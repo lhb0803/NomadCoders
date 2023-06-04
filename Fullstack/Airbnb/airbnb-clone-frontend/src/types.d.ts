@@ -17,7 +17,7 @@ export interface IRoomList {
 
 export interface IRoomOwner {
   name: string;
-  avatar: string;
+  profile_photo: string;
   username: string;
 }
 
@@ -43,4 +43,10 @@ export interface IRoomDetail extends IRoomList {
   };
   owner: IRoomOwner;
   amenities: IAmenity[];
+}
+
+export interface IReview {
+  payload: string;
+  rating: number;
+  user: IRoomOwner;
 }
