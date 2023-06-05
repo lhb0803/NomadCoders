@@ -1086,3 +1086,8 @@ python manage.py startapp rooms
 ## 19.7 Reviews
 * `<Avatar>` has many features
 * `getRoomReviews` at `api.ts`
+
+## 19.8 Conclusions
+* `<Review>` Component
+    * `<Container>`
+* Build your own component
