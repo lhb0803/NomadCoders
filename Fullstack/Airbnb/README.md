@@ -1091,3 +1091,10 @@ python manage.py startapp rooms
 * `<Review>` Component
     * `<Container>`
 * Build your own component
+
+# 20. Authentication
+## 20.0 useUser
+1. create `getMe`
+2. use `getMe` in `useQuery()` in `useUser.ts`
+    * make sure `retry: false`
+3. call useUser() from `Header.tsx`
