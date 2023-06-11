@@ -1098,3 +1098,21 @@ python manage.py startapp rooms
 2. use `getMe` in `useQuery()` in `useUser.ts`
     * make sure `retry: false`
 3. call useUser() from `Header.tsx`
+
+## 20.1 Credentials
+* recap of cookie authentication in Django
+    1. Automatically, browser sends cookie(that has session_id) back to website
+    2. Domain create cookie that browser saves
+        * Browser is looking at Domain and sends cookie to that specific Domain
+        * For ex, Google doesn't receive localhost domain's cookie, likewise localhost doesn't receive Google domain's cookie
+* Javascript fetching doesn't automatically send cookie to website
+    * which means, you have to manually send the cookie to  website
+    * need to change our fetcher function (need to modify axios)
+    * also, you need to change Django `settins.py` to make backend prepare for using Javascript fetching credentials
+        ```python
+        CORS_ALLOW_CREDENTIALS = True
+        ```
+    * **Should use Same Domain**
+        ```python
+        CORS_ALLOWED_ORIGINS = ["http://127.0.0.1:3000"]
+        ```

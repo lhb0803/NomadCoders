@@ -43,7 +43,7 @@ export default function Header() {
             <Button onClick={onSignupOpen} colorScheme={"red"}>Sign up</Button>
           </LightMode>
           </> 
-          : <Avatar size={"md"}/>
+          : <Avatar name={user?.name} src={user?.profile_photo} size={"md"}/>
         }
       </HStack>
       <LoginModal isOpen={isLoginOpen} onClose={onLoginClose}></LoginModal>
