@@ -36,3 +36,6 @@
 ## 2.5 Virtual Environment
 * Isolate installation depending on project
 * get requirements.txt from lecuture ([link](https://gist.github.com/serranoarevalo/72d77c36dde1cc3ffec34105eb666140))
+
+## 2.6 Jupyter Notebook
+* 
