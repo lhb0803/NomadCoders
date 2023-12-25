@@ -38,4 +38,12 @@
 * get requirements.txt from lecuture ([link](https://gist.github.com/serranoarevalo/72d77c36dde1cc3ffec34105eb666140))
 
 ## 2.6 Jupyter Notebook
-* 
+* with vscode
+
+# 3. Welcome to Langchain
+## 3.0 LLMs and Chat Models
+* familiarize with LLM
+* LLM vs Chat Model
+* Various models to use but APIs are unified -> very easy to use
+* When jupyter notebook runs, environment variables in `.env` file are loaded
+    - should name the variable exactly `OPENAI_API_KEY`
