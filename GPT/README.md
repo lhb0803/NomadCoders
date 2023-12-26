@@ -55,3 +55,6 @@
 * `Message`: you can make a list of message
     - `SystemMessage`, `AIMessage`, `HumanMessage`
 * next lecture: make prompt more useful
+
+## 3.2 Prompt Templates
+* 
