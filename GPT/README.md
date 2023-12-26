@@ -47,3 +47,11 @@
 * Various models to use but APIs are unified -> very easy to use
 * When jupyter notebook runs, environment variables in `.env` file are loaded
     - should name the variable exactly `OPENAI_API_KEY`
+
+## 3.1 Predict Messages
+* Chat Model can do conversation (group fo messages)
+* you can put argument when initiate constructor
+    - `temperature`: low -> not clever model vs high -> randomness
+* `Message`: you can make a list of message
+    - `SystemMessage`, `AIMessage`, `HumanMessage`
+* next lecture: make prompt more useful
