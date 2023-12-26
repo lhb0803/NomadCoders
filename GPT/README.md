@@ -57,4 +57,8 @@
 * next lecture: make prompt more useful
 
 ## 3.2 Prompt Templates
-* 
+* Prompt: only way to communicate with LLM
+* you can customize prompt
+    - Langchain is trying to collect user's prompt in hub
+* `template.format()` returns `string`
+* you can validate your prompt by using parameter
