@@ -62,3 +62,32 @@
     - Langchain is trying to collect user's prompt in hub
 * `template.format()` returns `string`
 * you can validate your prompt by using parameter
+
+## 3.3 Output Parser and LCEL
+### Output Parser
+* Sometimes you need to transform output response
+    - Response -> list, dictionary, tuple, ...
+* you can inherit `BaseOutputParser` to make your own parser.
+
+### Lanchain Expression Language
+* Make your code much shorter
+* Ingrdients
+    - chat model
+    - template
+    - output parser
+* chain: makes this ingrdients together
+* `|` operator connects these
+    ```python
+    chain = template | chat | CommaOutputParser()
+    chain.invoke(input={"param_1": value_1, "param_2": value_2})
+    ```
+* internally, when you `invoke` langchain will call:
+    1. `.format_messages()`
+    2. `.predict()`
+    3. `.parse()`
+* By this syntax, you can create multiple chains and combine each chain
+    ```python
+    chain_1 = template_1 | chat_1 | output_parser_1
+    chain_2 = template_2 | chat_2 | output_parser_2
+    chain_all = chain_1 | chain_2 | output_parser_3
+    ```
