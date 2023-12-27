@@ -91,3 +91,28 @@
     chain_2 = template_2 | chat_2 | output_parser_2
     chain_all = chain_1 | chain_2 | output_parser_3
     ```
+
+## 3.4 Chaining Chains
+* How LCEL works?
+    - official document: [link](https://python.langchain.com/docs/expression_language/interface)
+* components of langchain
+    - **Prompt**
+        - get input as dictionary
+        - returns output as `PromptValue`
+    - **LLM, ChatModel**
+        - get input as single string, list of chat messages or a `PromptValue`
+        - returns `ChatMessage`
+    - **OutputParser**
+        - get input as the output of an LLM or ChatModel (`ChatMessage`)
+* How to make chain of chains
+    ```python
+    chef_chain = chef_prompt | chat
+    veg_chain = veg_chef_prompt | chat
+
+    final_chain = {"recipe": chef_chain} | veg_chain
+    final_chain.invoke(
+        {
+            "cuisine": "indian"
+        }
+    )
+    ```
