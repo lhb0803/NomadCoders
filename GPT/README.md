@@ -116,3 +116,15 @@
         }
     )
     ```
+
+## 3.5 Recap
+* **Runnable Map**: first dict runs first, then second one runs (whatever output is)
+    ```python
+    {"recipe": chef_chain} | veg_chain
+    ```
+    - because second one (`veg_chain`) needs `recipe` (which is key of dict)
+    - mapping output of one chain to an input of the other chain
+* `streaming=True`
+    - allows us to see response **as it is generating**
+* `callbacks`
+    - prints every letter console asap
