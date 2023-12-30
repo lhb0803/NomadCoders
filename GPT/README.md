@@ -128,3 +128,19 @@
     - allows us to see response **as it is generating**
 * `callbacks`
     - prints every letter console asap
+
+# 4. Model IO
+* Langchain has a lot of useful modules
+## 4.0 Introductions
+* **Model I/O**: Prompts, Language models, Output parsers
+    - what we have learned
+* **Retrival**: How we can get external data and input into our model
+    - Text embedding models, Vector stores, ...
+* **Chain**: construct sequence of models
+* **Agent**: Make AI autonomous
+    - chain itself chooses tools to use
+* **Memory**: add memory to chatbot
+* **Callbacks**: can see what model is doing
+* Theory study order
+    - Model I/O -> Memory
+    - then we build apps
