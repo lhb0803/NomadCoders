@@ -144,3 +144,25 @@
 * Theory study order
     - Model I/O -> Memory
     - then we build apps
+
+## 4.1 FewShotPromptTemplate
+* Prompts can be saved in disk and loaded
+    - you can save prompts in database or in file system
+* Fewshot Learning
+    - Fewshot: give examples to the model
+    - `FewShotPromptTemplate`: can format examples
+    - When you want to build a auto-reply bot, you can use your reply histories
+* using `FewShotPromptTemplate`
+    1. format your example data
+        ```python
+        example_template = """
+            Human: {question}
+            AI: {answer}
+        """
+        example_prompt = PromptTemplate.from_template(example_template)
+        ```
+    2. define `FewShotPromptTemplate`
+        - `suffix`: define how the question looks to user
+            - `input_variables`: check validation
+    3. call `prompt.format()`
+        - it completes question with `suffix` we writes
