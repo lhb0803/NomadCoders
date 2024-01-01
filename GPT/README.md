@@ -169,3 +169,11 @@
 
 ## 4.2 FewShotChatMessagePromptTemplate
 * Doesn't need `suffix`, `input_variables` 
+
+## 4.3 LengthBasedExampleSelector
+* Dynamic example selector
+    - can decide How many examples feed to prompt
+    - API spent money depends on number of examples
+* `max_length`: only select examples under the number of `max_length` characters
+* Can create own example selector
+    - inherits `BaseExampleSelector` and override `select_exampels(self)`, `add_example(self)`
