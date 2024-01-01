@@ -166,3 +166,6 @@
             - `input_variables`: check validation
     3. call `prompt.format()`
         - it completes question with `suffix` we writes
+
+## 4.2 FewShotChatMessagePromptTemplate
+* Doesn't need `suffix`, `input_variables` 
