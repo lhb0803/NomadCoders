@@ -177,3 +177,64 @@
 * `max_length`: only select examples under the number of `max_length` characters
 * Can create own example selector
     - inherits `BaseExampleSelector` and override `select_exampels(self)`, `add_example(self)`
+
+## 4.4 Serialization and Composition
+* How to load prompts from disk
+    - Save your prompt and share
+* you can save your prompt in json or yaml format
+    ```python
+    from langchain.prompts import load_prompt
+
+    promt = load_promt("./promt.json")
+    ```
+* Compose many prompts together
+    ```python
+    from langchain.prompts.pipeline import PipelinePromptTemplate
+
+    intro = PromptTemplate.from_template(
+    """
+    You are a role playing assistant.
+    And you are impersonating a {character}
+    """
+    )
+
+    example = PromptTemplate.from_template(
+        """
+        This is an example of how you talk:
+
+        Human: {example_question}
+        You: {example_answer}
+    """
+    )
+
+    start = PromptTemplate.from_template(
+        """
+        Start now!
+
+        Human: {question}
+        You:
+    """
+    )
+
+    final = PromptTemplate.from_template(
+        """
+        {intro}
+                                        
+        {example}
+                                
+        {start}
+    """
+    )
+
+    prompts = [
+        ("intro", intro),
+        ("example", example),
+        ("start", start),
+    ]
+
+
+    full_prompt = PipelinePromptTemplate(
+        final_prompt=final,
+        pipeline_prompts=prompts,
+    )
+    ```
