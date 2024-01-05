@@ -238,3 +238,27 @@
         pipeline_prompts=prompts,
     )
     ```
+
+## 4.5 Caching
+* can save money: doesn't have to re-call API
+    ```python
+    from langchain.globals import set_llm_cache
+    from langchain.cache import InMemoryCache
+
+    set_llm_cache(InMemoryCache())
+    ```
+* also you can shorten time
+    - do not hit LLM, the model reuses the answer
+* If you want to see log, you can use `set_debug(True)`
+* `InMemoryCache` only saves data in your memory (Not on Disk)
+    - so it erases data if you re-start your script
+* `SQLiteCache` saves data in your database
+    ```python
+    from langchain.globals import set_llm_cache
+    from langchain.cache import SQLiteCache
+
+    set_llm_cache(SQLiteCache("cache.db")) # creates database
+    ```
+* check out other third-party tools in here: 
+    - https://python.langchain.com/docs/integrations/providers
+
