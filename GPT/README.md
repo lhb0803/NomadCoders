@@ -262,3 +262,21 @@
 * check out other third-party tools in here: 
     - https://python.langchain.com/docs/integrations/providers
 
+## 4.6 Serialization
+* Save & Load Model (+ check how many money I spent)
+* check how many money I spent
+    ```python
+    from langchain.callbacks import get_openai_callback
+
+    with get_openai_callback() as usage:
+        chat.predict("What is the recipe for soju?")
+        print(usage)
+    ```
+* Serialzation
+    - Save model: `chat.save("model.json")`
+    - Load model: 
+        ```python
+        from langchain.llms.loading import load_llm
+
+        chat = load_llm("model.json")
+        ```
