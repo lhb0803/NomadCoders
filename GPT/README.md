@@ -317,3 +317,19 @@
 * you can check other types of Memory modules: https://python.langchain.com/docs/modules/memory/types
 * `Entity`: [What is Named Entity Recognition(NER)?](https://www.datacamp.com/blog/what-is-named-entity-recognition-ner)
 * There are many integrations between memory and database
+
+## 5.5 Memory on LLMChain
+* How to plug memory into our chain
+### 1. LLM Chain
+* off-the-shelf chain: general purpose chain <-> build our own code
+    ```python
+    chain = LLMChain(
+        llm=llm,
+        memory=memory,
+        prompt=PromptTemplate.from_template("{question}"),
+        verbose=True, # for debug
+    )
+    ```
+* memory is being updated, but it doesn't feed data into prompt
+* -> You should tell Memory class to **put content inside Template**
+    - `memory_key`: gives formatted key string which is used in template
