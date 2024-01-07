@@ -298,3 +298,9 @@
 * Useful when you want to keep your memory size
 * But chatbot **will not able to remember very long ago conversation**
 
+## 5.2 ConversationSummaryMemory
+* Makes use of LLM -> **costs money to use**
+* It saves **summary** of conversation! (Not the entire text)
+    - If you have very long conversation this will be very useful
+    - will be efficient in token usage when the conversation is very very long
+
