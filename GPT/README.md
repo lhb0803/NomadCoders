@@ -280,3 +280,13 @@
 
         chat = load_llm("model.json")
         ```
+
+# 5. Memory
+- Langchaign has a few memory modules
+- OpenAI API doesn't apply memory
+- We will learn different kinds of memory modules and how to implement them to our model
+
+## 5.0 ConversationBufferMemory
+- Saves whole conversation
+- **Inefficient**: when conversation gets long, it needs to save large prompt
+- Useful in **text completion**
