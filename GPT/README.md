@@ -304,3 +304,8 @@
     - If you have very long conversation this will be very useful
     - will be efficient in token usage when the conversation is very very long
 
+## 5.3 ConversationSummaryBufferMemory
+* Mixture of `ConversationBufferMemory` and `ConversationSummaryMemory`
+* when conversation hits **limit**, it summarizes old messages -> Able to keep track of recent conversation while save old messages
+    - `max_token_limit` is the limit we use
+* `SystemMessage` tells whether it is ummarized
