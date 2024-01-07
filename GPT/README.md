@@ -349,3 +349,17 @@
         )
         ```
     
+## 5.7 LCEL Based Memory
+### 2. Build your own code (Langchain Expression Language)
+* Recommended way, but very manual process
+* `RunnablePassthrough`: assign values by calling a function
+    ```python 
+    from langchain.schema.runnable import RunnablePassthrough
+
+    def load_memory(_):
+        return memory.load_memory_variables({})["chat_history"]
+
+    chain = RunnablePassthrough.assign(chat_history=load_memory) | prompt | llm
+    ```
+    - **Caution**: every component gets input from former component and returns output to next component
+    - which means, `load_memory` function would get input value when `chain.invoke({"question": "What is your name?"})`
