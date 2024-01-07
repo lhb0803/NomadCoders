@@ -333,3 +333,19 @@
 * memory is being updated, but it doesn't feed data into prompt
 * -> You should tell Memory class to **put content inside Template**
     - `memory_key`: gives formatted key string which is used in template
+
+## 5.6 Chat Based Memory
+* `MessagesPlaceholder`: can receive message whether it is created by human or AI
+    - you cannot know how many messages are created above and who sent them.
+    - so it is convenient to use `MessagesPlaceholder`
+        ```python
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                ("system", "You are a helpful AI talking to a humn"),
+                MessagesPlaceholder(variable_name="chat_history"),
+                ("human", "{question}"),
+
+            ]
+        )
+        ```
+    
