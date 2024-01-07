@@ -282,11 +282,19 @@
         ```
 
 # 5. Memory
-- Langchaign has a few memory modules
-- OpenAI API doesn't apply memory
-- We will learn different kinds of memory modules and how to implement them to our model
+* Langchaign has a few memory modules
+* OpenAI API doesn't apply memory
+* We will learn different kinds of memory modules and how to implement them to our model
 
 ## 5.0 ConversationBufferMemory
-- Saves whole conversation
-- **Inefficient**: when conversation gets long, it needs to save large prompt
-- Useful in **text completion**
+* Saves whole conversation
+* **Inefficient**: when conversation gets long, it needs to save large prompt
+* Useful in **text completion**
+
+## 5.1 ConversationBufferWindowMemory
+* Difference with `ConversationBufferMemory`:
+    - saves a part of conversation (not entire one)
+    - ex. saves last 5 messages -> when 6th message comes, first message is discarded
+* Useful when you want to keep your memory size
+* But chatbot **will not able to remember very long ago conversation**
+
