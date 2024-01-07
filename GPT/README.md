@@ -309,3 +309,11 @@
 * when conversation hits **limit**, it summarizes old messages -> Able to keep track of recent conversation while save old messages
     - `max_token_limit` is the limit we use
 * `SystemMessage` tells whether it is ummarized
+
+## 5.4 ConversationKGMemory
+* Conversation Knowledge Graph Memory
+* Also uses LLM
+* Builds entity's knowledge graph - summary of important pieces
+* you can check other types of Memory modules: https://python.langchain.com/docs/modules/memory/types
+* `Entity`: [What is Named Entity Recognition(NER)?](https://www.datacamp.com/blog/what-is-named-entity-recognition-ner)
+* There are many integrations between memory and database
