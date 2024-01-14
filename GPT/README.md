@@ -363,3 +363,11 @@
     ```
     - **Caution**: every component gets input from former component and returns output to next component
     - which means, `load_memory` function would get input value when `chain.invoke({"question": "What is your name?"})`
+
+## 5.8 Recap
+* Saving Memory of Our LLM
+    1. Using LLM Chain
+    2. Using Chat Prompt Template
+    3. Manual way (LCEL)
+        - recommended way: because you can do many things with memory; persist it load it from somewhere else
+        - other frameworks hide what happens inside
