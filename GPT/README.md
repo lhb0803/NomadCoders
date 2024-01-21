@@ -385,3 +385,14 @@
         2. extra data: Context <- extra sources we provide to the model
         3. (data which is already used for training the model)
     - There are many ways to build RAG
+
+## 6.1 Data Loaders and Splitters
+* First step of RAG: **Retrieval**
+* Load
+    - There are a huge number of Data Loaders that Langchain provides
+        - official document: https://python.langchain.com/docs/integrations/document_loaders/
+    - `UnstructuredFileLoader` is compatible with different kinds of file types
+* Transform: Split the document before you embed
+    - `RecursiveCharacterTextSplitter`: use `chunk_overlap` to make sure not cut in middle of a sententce
+    - `CharacterTextSplitter`: use `separater`
+
