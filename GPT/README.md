@@ -371,3 +371,17 @@
     3. Manual way (LCEL)
         - recommended way: because you can do many things with memory; persist it load it from somewhere else
         - other frameworks hide what happens inside
+
+# 6.0 RAG
+* Build our own document GPT App
+## 6.0 Introductions
+* not using Streamlit yet: start with jupyter notbook
+    - bad UI, but good to learn building blocks
+* **RAG**: Retrieval Augmented Generation
+    - using extra sources (ex. private document) to provide to our model for better performance
+    - expand capability of LLM
+    - our model receives these:
+        1. Question
+        2. extra data: Context <- extra sources we provide to the model
+        3. (data which is already used for training the model)
+    - There are many ways to build RAG
