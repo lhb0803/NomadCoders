@@ -396,3 +396,8 @@
     - `RecursiveCharacterTextSplitter`: use `chunk_overlap` to make sure not cut in middle of a sententce
     - `CharacterTextSplitter`: use `separater`
 
+## 6.2 Tiktoken
+* Token is different with character or word
+    - Test: https://platform.openai.com/tokenizer
+* Tiktoken is published by OpenAI
+    - `from_tiktoken_encoder`
