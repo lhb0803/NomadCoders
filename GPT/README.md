@@ -448,3 +448,7 @@
     vectorstore = Chroma.from_documents(docs, cached_embeddings)
     ```
 
+## 6.5 Langsmith
+* https://www.langchain.com/langsmith
+    - sign up and wait for invitation code
+
