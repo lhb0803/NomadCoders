@@ -412,3 +412,39 @@
 * Useful sites
     - https://turbomaze.github.io/word2vecjson/
     - https://www.youtube.com/watch?v=2eWuYf-aZE4
+
+## 6.4 Vector Store
+* how to save money?: Embedding is not free
+* Langchain has OpenAI Embedding Models
+    ```python
+    from langchain.embeddings import OpenAIEmbeddings
+
+    embeddings = OpernAIEmbeddings()
+    embeddings.embed_query("Hi")
+    ```
+* You should save embeddings not to call every time you want to embed
+* Vector stores save vectors locally (or on cloud)
+* Open source free Vector Store: `Chroma`
+    - It saves vectors locally
+    ```python
+    from langchain.vectorstores import Chroma
+
+    loader = UnstructredFileLoader("./files/george_orwell_1984_ch1.txt")
+    docs = loader.load_and_split(text_splitter=splitter)
+    vectorstore = Chroma.from_documents(docs, embeddings)
+    ```
+    - now you can **search** in your local vector store!
+* Cache your embeddings to save money
+    ```python
+    from langchain.embeddings import CachedBackedEmbeddings
+    from langchain.storage import LocalFileStore
+
+    cache_dir = LocalFileStore("./.cache/")
+    cached_embeddings = CachedBackedEmbeddings(
+        underlying_embeddings=embeddings,
+        document_embedding_cache=cache_dir,
+    )
+
+    vectorstore = Chroma.from_documents(docs, cached_embeddings)
+    ```
+
