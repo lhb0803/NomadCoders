@@ -401,3 +401,14 @@
     - Test: https://platform.openai.com/tokenizer
 * Tiktoken is published by OpenAI
     - `from_tiktoken_encoder`
+
+## 6.3 Vectors
+* Embed
+    - Turn human language into numbers to make computers understand
+    - =**Vectorizaion**
+    - You can do operations with numbers
+    - You can calculate distance -> use distance to find similar words
+    - **Purpose of Embedding: Search Database to find similar words**
+* Useful sites
+    - https://turbomaze.github.io/word2vecjson/
+    - https://www.youtube.com/watch?v=2eWuYf-aZE4
