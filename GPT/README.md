@@ -452,3 +452,42 @@
 * https://www.langchain.com/langsmith
     - sign up and wait for invitation code
 
+## 6.6 RetrievalQA
+* Document chains
+* LLM Chain is considered as legacy
+    - preferred to use LCEL (LangChain Expression Language)
+        - better to see all configurations
+* `Stuff` documents chain
+    ```python
+    from langchain.chains import RetrievalQA
+    
+    chain = RetrievalQA.from_chain_type(
+        llm=llm, 
+        chain_type="stuff",
+        retriever=vectorstore.as_retriever(), # interface of class which retrieves documents from many places like cloud, vector store
+    )
+
+    chain.run("Describe Victory Mansions")
+    ```
+* Langsmith would show how internal sysmtem works
+    ```
+    Retriever
+    >> StuffDocumentsChain
+        >> LLMChain
+            >> ChatOpenAI
+    ```
+    - Final Prompt constitutes like this:
+        - `System`: "Use the following pieces of context to answer the user's question. ... "
+            - Puts all documents it founds (how `Stuff` chain_type works)
+        - `Human`: "Describe Victory Mansions"
+* `RetrievalQA` can change `chain_type` easily
+    ```python
+    chain = RetrievalQA.from_chain_type(
+        llm=llm, 
+        chain_type="refine", # "map_reduce", "map_rerank"
+        retriever=vectorstore.as_retriever(),
+    )
+    ```
+    - reference: https://python.langchain.com/docs/modules/data_connection/retrievers/
+    - a bit obscure: hard to customize yet
+        - lack explaination yet
