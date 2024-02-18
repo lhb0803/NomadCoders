@@ -491,3 +491,18 @@
     - reference: https://python.langchain.com/docs/modules/data_connection/retrievers/
     - a bit obscure: hard to customize yet
         - lack explaination yet
+
+## 6.7 Recap
+* What happens so far
+    1. Load Files
+    2. Split files to handle big documents with smaller pieces
+    3. Embedding: make vectors
+    4. Save embedding to cache (for cheaper bill)
+    5. Call Vector store
+    6. RetrievalQA (chain) 
+        - `llm`, `chain_type`, `retriever`
+    7. Run it! - magic happens!
+* Various types of `chain_type`
+    - "stuff", "refine", "map_reduce", "map_rerank"
+* Next time we will implement "stuff" by ourself 
+    - Every internal process will be exposed.
