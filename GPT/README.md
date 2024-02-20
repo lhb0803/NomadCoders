@@ -506,3 +506,21 @@
     - "stuff", "refine", "map_reduce", "map_rerank"
 * Next time we will implement "stuff" by ourself 
     - Every internal process will be exposed.
+
+## 6.8 Stuff LCEL Chain
+* make Stuff Chain with LCEL (reference: https://python.langchain.com/docs/expression_language/interface)
+    ```python
+    retriever = vectorstore.as_retriver()
+    prompt = ChatPromtTemplate.from_messages(
+        [
+            ("system", "You are a helpful assistant. Answer questions using only the following context. If you don't know the answer just say yhou don't know, don't make it up:\n\n{context}"),
+            ("human", "{question}")
+        ]
+    )
+    llm = ChatOpenAI(temperature=0.1)
+
+    chain = {"context": retriever, "question": RunnablePassthrough()} | prompt | llm
+
+    chain.invoke("Describe Victory Mansions")
+    ```
+* much more clear than using obscure modules
