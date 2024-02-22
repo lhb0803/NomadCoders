@@ -511,7 +511,7 @@
 * make Stuff Chain with LCEL (reference: https://python.langchain.com/docs/expression_language/interface)
     ```python
     retriever = vectorstore.as_retriver()
-    prompt = ChatPromtTemplate.from_messages(
+    prompt = ChatPromptTemplate.from_messages(
         [
             ("system", "You are a helpful assistant. Answer questions using only the following context. If you don't know the answer just say yhou don't know, don't make it up:\n\n{context}"),
             ("human", "{question}")
@@ -524,3 +524,56 @@
     chain.invoke("Describe Victory Mansions")
     ```
 * much more clear than using obscure modules
+
+## 6.9 Map Reduce LCEL Chain
+* How Map Reduce chain works
+    1. prepare list of docs
+    2. for each doc in list, make `promp | llm` chain
+    3. get each response from list and put them all together -> final doc
+    4. final doc | prompt | llm
+* script
+    ```python
+    
+    map_doc_prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system",
+                """
+                Use the following portion of a long document to see if any of the text is relevant to answer the question. Return any relevant text verbatim.
+                ------
+                {portion}
+                """
+            ),
+            ("human", "{question}"),
+        ]
+    )
+    map_doc_chain = map_doc_prompt | llm
+
+    def map_docs(inputs):
+        documents = inputs['documents']
+        question = inputs['question']
+        
+        results = [map_doc_chain.invoke({"portion": doc.page_content, "question": question}).content for doc in documents]
+        return "\n\n".join(results)
+    
+    map_chain = {"documents": retriever, "question": RunnablePassthrough()} | RunnableLambda(map_docs)
+
+    final_prompt = ChatPromptTemplate.from_messages(
+        [
+            (
+                "system",
+                """
+                Given the following extracted parts of a long document and a question, create a final answer.
+                If you don't know the answer, just say that you don't know. Don't try to make up an answer.
+                ------
+                {context}
+                """
+            ),
+            ("human", "{question}"),
+        ]
+    )
+
+    chain ={"context": map_chain, "question": RunnablePassthrough()} | final_prompt | llm
+
+    chain.invoke("Describe Victory Mansions")
+    ```
