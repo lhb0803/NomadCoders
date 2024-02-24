@@ -591,3 +591,11 @@
     streamlit run home.py
     ```
     -> will run local server
+
+## 7.1 Magic
+* at 7.0, we learned how to import streamlit and applied 3 kinds of **widgets**
+* `st.write`: what streamlit calls **Magic**
+    - it will print out everything
+    - why magic?
+        - just putting `a` is same with `st.write(a)`
+* There are a lot of widgets streamlit provides
