@@ -372,7 +372,7 @@
         - recommended way: because you can do many things with memory; persist it load it from somewhere else
         - other frameworks hide what happens inside
 
-# 6.0 RAG
+# 6. RAG
 * Build our own document GPT App
 ## 6.0 Introductions
 * not using Streamlit yet: start with jupyter notbook
@@ -582,3 +582,12 @@
 * recap what we have done at last lecture
 * `RunnableLambda` get function which is runnable
 * Next time learn beautiful interface `Streamlit`
+
+# 7. DocumentGPT
+## 7.0 Introduction
+* [Streamlit](https://streamlit.io)
+* import and run stream lit
+    ```bash
+    streamlit run home.py
+    ```
+    -> will run local server
