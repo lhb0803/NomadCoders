@@ -577,3 +577,8 @@
 
     chain.invoke("Describe Victory Mansions")
     ```
+
+## 6.10 Recap
+* recap what we have done at last lecture
+* `RunnableLambda` get function which is runnable
+* Next time learn beautiful interface `Streamlit`
