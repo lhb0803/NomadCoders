@@ -604,3 +604,31 @@
 * Every time your data changes, whole python file would run again
     - Differenct with Web development framework like React
 * You can cache
+
+## 7.3 Multi Page
+* How to create side bars
+* easy way
+    ```python
+    st.sidebar.title("sidebar 1")
+    ```
+* proper way
+    ```python
+    with st.sidebar:
+        st.title("sidebar 1")
+        st.text_input("xxx")
+    ```
+* proper way means that the pattern is used a lot for differents kinds of widgets
+    ```python
+    tab_a, tab_b, tab_c = st.tabs(["A", "B", "C"])
+
+    with tab_a:
+        st.write("a")
+    
+    with tab_b:
+        st.write("b")
+
+    with tab_c:
+        st.write("c")
+
+    ```
+* `st.set_page_config()` can configure your browser tab name
