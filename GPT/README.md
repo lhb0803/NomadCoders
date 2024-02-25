@@ -599,3 +599,8 @@
     - why magic?
         - just putting `a` is same with `st.write(a)`
 * There are a lot of widgets streamlit provides
+
+## 7.2 Data Flow
+* Every time your data changes, whole python file would run again
+    - Differenct with Web development framework like React
+* You can cache
