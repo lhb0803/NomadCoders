@@ -632,3 +632,9 @@
 
     ```
 * `st.set_page_config()` can configure your browser tab name
+
+## 7.4 Chat Messages
+* start to build chat bot with streamlit and langchain 
+* **IMPORTANT**: when data changed file runs again!
+    - You need a system that saves data
+    - `st.session_state`
