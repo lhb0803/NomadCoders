@@ -638,3 +638,6 @@
 * **IMPORTANT**: when data changed file runs again!
     - You need a system that saves data
     - `st.session_state`
+
+## 7.5 Recap
+* `session_state`: used for data that should not be forgotten
