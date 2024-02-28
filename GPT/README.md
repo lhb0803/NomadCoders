@@ -641,3 +641,17 @@
 
 ## 7.5 Recap
 * `session_state`: used for data that should not be forgotten
+
+## 7.6 Uploading Documents
+* recap RAG
+    1. load file
+    2. split file
+    3. embed -> cache
+    4. vectorstore -> retriever
+        - Stuff LCEL
+    5. make prompt
+* will learn how to cache in Streamlit
+    - Streamlit runs your code top to bottom
+* configure .env directory to read API Key
+    - Streamlit uses secrets
+        
