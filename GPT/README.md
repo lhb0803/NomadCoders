@@ -668,3 +668,15 @@
         prompt = template.format_messages(context=docs, question=message)
         ```
 * recap `RunnableLambda()`, `RunnablePassthrough()`
+
+## 7.9 Streaming
+* Instead of waiting for whole response, let's apply callback handler
+* `BaseCallbackHandler`
+* `*args`: recieves arguments like this:
+    - `on_llm_start(1, 2, 3, 4)`
+* `**kwargs`: recieves keyworded arguments like this:
+    - `on_llm_start(a=1, a=4, b=1)`
+* `CallbackHandler` is called when `llm` is invoked
+    - if it is invoked **inside chate_message**, then message_box.markdown() is treated as chat_message()!
+    - but it is not saved in our cache. -> if we ask another question, previous answer text would be disappeared
+    - we use `on_llm_end()` to save in our cache
