@@ -654,4 +654,7 @@
     - Streamlit runs your code top to bottom
 * configure .env directory to read API Key
     - Streamlit uses secrets
-        
+
+## 7.7 Chat History
+* streamlit runs from top to bottom every time you refresh
+* streamlit is smart enough to know changes of files
