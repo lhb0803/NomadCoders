@@ -693,3 +693,9 @@
     - not to send our data to others
 * Code challenge
     - chain doesn't have memory yet -> **make langchain memory**
+
+# 8. PrivateGPT
+## 8.1 Introduction
+* Will swap our embedding and chat model
+* Download model and will run our model offline
+* HuggingFace, GPT4All, Ollama
