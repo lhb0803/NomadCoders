@@ -658,3 +658,13 @@
 ## 7.7 Chat History
 * streamlit runs from top to bottom every time you refresh
 * streamlit is smart enough to know changes of files
+
+## 7.8 Chain
+* You can build retriever -> prompt manually, but we will do it with chain
+    * manual invoke
+        ```python
+        docs = retriever.invoke(message)
+        docs = "\n\n".join(document.page_content for document in docs)
+        prompt = template.format_messages(context=docs, question=message)
+        ```
+* recap `RunnableLambda()`, `RunnablePassthrough()`
