@@ -680,3 +680,16 @@
     - if it is invoked **inside chate_message**, then message_box.markdown() is treated as chat_message()!
     - but it is not saved in our cache. -> if we ask another question, previous answer text would be disappeared
     - we use `on_llm_end()` to save in our cache
+
+## 7.10 Recap
+* streamlit -> make UI
+* upload and save file to cache
+* langchain which uses OpenAI Chat model
+    - invoke it with streamlit message
+* how to stream AI message
+* Next time
+    - Next embedding (llm) model
+    - not to pay money
+    - not to send our data to others
+* Code challenge
+    - chain doesn't have memory yet -> **make langchain memory**
