@@ -699,3 +699,15 @@
 * Will swap our embedding and chat model
 * Download model and will run our model offline
 * HuggingFace, GPT4All, Ollama
+
+## 8.2 HuggingFaceHub
+* https://huggingface.co/
+* How to Download models to our local PC and use them
+    - 2ways: Download vs Inference API
+* Inference API
+    - `mistralai/Mistral-7B-Instruct-v0.2` is free API
+    - you can check API document here: https://huggingface.co/docs/api-inference/index
+    - you can make prototype with free
+* You can develop your prompt by checking out and study the model(this time `mistralai`)'s official documentation
+    - https://docs.mistral.ai/
+    - If you follow format which docuemnts provide, you can develop your model performance.
