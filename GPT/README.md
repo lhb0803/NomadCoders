@@ -718,3 +718,14 @@
 * For practice, we will download GPT2
 * `device`: 0 for GPU, -1 for CPU
     - 0 doesn't work for MacBook Pro
+
+## 8.3 GPT4All
+* Another awesome way to run local model on our computer
+    - https://gpt4all.io/index.html
+* Not many models yet (less than HuggingFaceHub)
+* Download and run model like this:
+    ```python
+    llm = GPT4All(
+        model="./falcon.bin",
+    )
+    ```
