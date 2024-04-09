@@ -695,12 +695,12 @@
     - chain doesn't have memory yet -> **make langchain memory**
 
 # 8. PrivateGPT
-## 8.1 Introduction
+## 8.0 Introduction
 * Will swap our embedding and chat model
 * Download model and will run our model offline
 * HuggingFace, GPT4All, Ollama
 
-## 8.2 HuggingFaceHub
+## 8.1 HuggingFaceHub
 * https://huggingface.co/
 * How to Download models to our local PC and use them
     - 2ways: Download vs Inference API
@@ -711,3 +711,10 @@
 * You can develop your prompt by checking out and study the model(this time `mistralai`)'s official documentation
     - https://docs.mistral.ai/
     - If you follow format which docuemnts provide, you can develop your model performance.
+
+## 8.2 HuggingFacePipeline
+* Download a model and run in our local
+    - Nvidea GPU is much faster (MacBook would be slow)
+* For practice, we will download GPT2
+* `device`: 0 for GPU, -1 for CPU
+    - 0 doesn't work for MacBook Pro
