@@ -729,3 +729,25 @@
         model="./falcon.bin",
     )
     ```
+
+## 8.4 Ollama
+* Nico's favorite way to use LLM locally
+* Download model from official site
+    - https://ollama.com/download
+* check downloaded: run `ollama` in terminal
+* run mistral
+    ```bash
+    ollama run mistral
+    ```
+    - When you run it first time, it would download the model
+* How Ollama works
+    1. makes a server in your machine
+    2. when you run a command, then an API hits the server
+    3. the server returns values with streaming
+* `ollama` has many commands like `list`, `rm`, ...
+* You can use ollama model in Lanchain Framework
+    ```python
+    from langchain.embeddings import OllamaEmbeddings
+    from langchain.chat_models import ChatOllama
+    ```
+* Mistral is a instruct-based model, So you should give specific instructions to your model
