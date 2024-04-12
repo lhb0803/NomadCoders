@@ -751,3 +751,10 @@
     from langchain.chat_models import ChatOllama
     ```
 * Mistral is a instruct-based model, So you should give specific instructions to your model
+
+## 8.5 Conclusions
+* next time: 
+    - how to bring data from webiste like Wikipedia to build QuizGPT
+    - more about streamlit
+* Code Challenge: create input with select box widget
+    - allow to change model
