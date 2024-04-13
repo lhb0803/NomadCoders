@@ -758,3 +758,10 @@
     - more about streamlit
 * Code Challenge: create input with select box widget
     - allow to change model
+
+# 9. QuizGPT
+## 9.0 Introduction
+* **output parser**: force model to answer in specific format
+* only available features in OpenAI GPT3 and GPT4
+    - **Function Calling**: can describe how our function behaves and what parameters it needs to LLM
+        - LLM will reply with function
