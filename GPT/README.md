@@ -765,3 +765,9 @@
 * only available features in OpenAI GPT3 and GPT4
     - **Function Calling**: can describe how our function behaves and what parameters it needs to LLM
         - LLM will reply with function
+
+## 9.1 WikipediaRetriever
+* How to get document from Wikipedia
+    ```python
+    from langchain.retrievers import WikipediaRetriever
+    ```
