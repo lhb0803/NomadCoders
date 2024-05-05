@@ -785,3 +785,9 @@
 * Make formatting prompt
     - Make output as JSON to let python file to load easily
     - Use double curly bracket (`{{}}`) to make llm avoid to format it
+
+## 9.5 Output Parser
+* Paint UI by making output parser
+    - JSON -> Web UI
+* `BaseOutputParser` class needs method `parse`
+
