@@ -790,4 +790,12 @@
 * Paint UI by making output parser
     - JSON -> Web UI
 * `BaseOutputParser` class needs method `parse`
+* Make JSON object to python usable object (dictionary)
 
+
+## 9.6 Caching
+* `streamlit` will not make hashed file of parameters which start with character `_`
+    - reference: https://docs.streamlit.io/images/caching-high-level-diagram.png
+* You should cache function, not entire parameter (data that is used as input of the fuction)
+    - Mutable data like `list` is not hashable
+* small hack: If you want to update function(not to use data from cache), you should add another parameter which is not Mutable
