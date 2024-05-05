@@ -775,3 +775,8 @@
 ## 9.2 GPT-4 Turbo
 * Find a way to give all text to LLM to generate questions about it
 * GPT-4 Turbo has a large context window
+
+## 9.3 Questions Prompt
+* Build chain to generate questions
+* Give examples to prompt to format the questions
+    - you should consider prompt - performance of the llm depends on it
