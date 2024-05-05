@@ -780,3 +780,8 @@
 * Build chain to generate questions
 * Give examples to prompt to format the questions
     - you should consider prompt - performance of the llm depends on it
+
+## 9.4 Formatter Prompt
+* Make formatting prompt
+    - Make output as JSON to let python file to load easily
+    - Use double curly bracket (`{{}}`) to make llm avoid to format it
