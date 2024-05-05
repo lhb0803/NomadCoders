@@ -771,3 +771,7 @@
     ```python
     from langchain.retrievers import WikipediaRetriever
     ```
+
+## 9.2 GPT-4 Turbo
+* Find a way to give all text to LLM to generate questions about it
+* GPT-4 Turbo has a large context window
