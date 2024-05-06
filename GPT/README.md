@@ -799,3 +799,9 @@
 * You should cache function, not entire parameter (data that is used as input of the fuction)
     - Mutable data like `list` is not hashable
 * small hack: If you want to update function(not to use data from cache), you should add another parameter which is not Mutable
+
+## 9.7 Grading Questions
+* Paint the output of llm response
+    - `st.form()`, `st.radio()`, `st.form_submit_button()`
+    - data is not updated until you click submit button (`st.form_submit_buttion()`) 
+    
