@@ -872,3 +872,9 @@
 * ReAct Logic: https://react-lm.github.io/
 * `handle_parsing_errors=True` will make langchain handle output parsing error
     - Sometimes, some steps of langchain returns output which is not expected (output parsing error)
+
+## 12.4 OpenAI Functions Agent
+* use `pydantic` to define inputs of a class
+* Prompt is much more smaller -> Can **save money**
+    - At previous lecture, the output is appended to next prompt, so the prompt gets much longer
+    - But `OPENAI_FUNCTIONS` agent uses `pydantic` with formatted functions made by Langchain
