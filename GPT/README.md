@@ -866,3 +866,9 @@
     - output parser returns value as json
     - you can check this in Langsmith
     - rarely, output parsing is broken
+
+## 12.3 Zero-shot ReAct Agent
+* Zero-shot ReAct Agent cannot get multiple inputs (not like StructuredTool)
+* ReAct Logic: https://react-lm.github.io/
+* `handle_parsing_errors=True` will make langchain handle output parsing error
+    - Sometimes, some steps of langchain returns output which is not expected (output parsing error)
