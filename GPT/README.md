@@ -878,3 +878,10 @@
 * Prompt is much more smaller -> Can **save money**
     - At previous lecture, the output is appended to next prompt, so the prompt gets much longer
     - But `OPENAI_FUNCTIONS` agent uses `pydantic` with formatted functions made by Langchain
+
+## 12.5 Search Tool
+* Create a tool that gets company information from website
+* If you use `DuckDuckGoSearchAPIWrapper` you need to install it
+    ```sh
+    pip install -U duckduckgo_search
+    ```
