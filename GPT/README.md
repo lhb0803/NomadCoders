@@ -805,3 +805,38 @@
     - `st.form()`, `st.radio()`, `st.form_submit_button()`
     - data is not updated until you click submit button (`st.form_submit_buttion()`) 
     
+## 9.8 Function Calling
+* for model to follow output
+    - actually call our code
+    - force the model to follow specific functions
+* It works only in ChatOpenAI
+* make schema of function like this:
+    ```python
+    function = {
+        "name": "get_weather",
+        "description": "function that takes longitude and latitude to find the weather of a place",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "lon": {
+                    "type": "float",
+                    "description": "The longitude coordinate"
+                },
+                "lat": {
+                    "type": "float",
+                    "description": "The latitude coordinate"
+                },
+            },
+            "required": ["lon", "lat"],
+        }
+    }
+    ```
+* then give this schema to llm
+    ```python
+    llm = ChatOpenAI().bind(
+        funtion_call={
+            "name": "get_weather"
+        },
+        funtions=[function]
+    )
+    ```
