@@ -840,3 +840,6 @@
         funtions=[function]
     )
     ```
+
+## 9.9 Conclusions
+* code challenge: Use function calling to output parsing framework
