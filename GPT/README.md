@@ -856,3 +856,13 @@
     - llm just completes text: guessing next tokens statistically (predicting)
 * **Langchain creates cool prompt** to give llm
     - Langchain is using outputparser to give input to next step
+
+## 12.2 How Do Agents Work
+* repeat **Thought -> Observation -> Action**
+    - https://python.langchain.com/v0.1/docs/modules/agents/concepts/
+    - runs **looping** `next_action` until, Final Output is reached
+    - `action` requires `action_input`
+* Lagnchain recieves output of previous step to next step by putting it into prompt
+    - output parser returns value as json
+    - you can check this in Langsmith
+    - rarely, output parsing is broken
