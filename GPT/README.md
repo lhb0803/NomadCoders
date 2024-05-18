@@ -845,6 +845,7 @@
 * code challenge: Use function calling to output parsing framework
 
 # 12. InvestorGPT
+## 12.0 Introductions
 * Agent
     - https://python.langchain.com/v0.1/docs/modules/agents/
     - you will give agent tools to use and agent will explore itself using the tools and then give summary information to you
