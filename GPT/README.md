@@ -849,3 +849,10 @@
 * Agent
     - https://python.langchain.com/v0.1/docs/modules/agents/
     - you will give agent tools to use and agent will explore itself using the tools and then give summary information to you
+
+## 12.1 Your Firt Agent
+* llm makes mistakes
+    - llm cannot do math calculation
+    - llm just completes text: guessing next tokens statistically (predicting)
+* **Langchain creates cool prompt** to give llm
+    - Langchain is using outputparser to give input to next step
