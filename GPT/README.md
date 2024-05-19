@@ -885,3 +885,7 @@
     ```sh
     pip install -U duckduckgo_search
     ```
+
+## 12.6 Stock Information Tools
+* Make Agent find information itself using tools we provide
+    - AlphaVantage (instead I use, `yfinance`)
