@@ -889,3 +889,19 @@
 ## 12.6 Stock Information Tools
 * Make Agent find information itself using tools we provide
     - AlphaVantage (instead I use, `yfinance`)
+
+## 12.7 Agent Prompt
+* Connect Agent to streamlit UI
+    - Goodbye with streamlit UI
+* How can we change system prompt of Agent
+    ```python
+    from langchain.schema import SystemMessage
+
+    agent = initialize_agent(
+        agent_kwargs={
+            "system_message": SystemMessage(content="""
+                You are a helper that ...
+            """)
+        }
+    )
+    ```
