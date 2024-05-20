@@ -905,3 +905,11 @@
         }
     )
     ```
+
+## 12.8 SQLDatabaseToolkit
+* There are so many tools provided by Langchain
+    - https://python.langchain.com/v0.1/docs/integrations/tools/
+* This time we will use `SQLDatabaseToolkit`
+    - Agent reads database to figure out the schema itself
+    - Returns the output of human user's query
+    - Maybe, I can use it to make SQL bot
