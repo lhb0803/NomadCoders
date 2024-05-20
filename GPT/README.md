@@ -913,3 +913,8 @@
     - Agent reads database to figure out the schema itself
     - Returns the output of human user's query
     - Maybe, I can use it to make SQL bot
+
+## 12.9 Conclusions
+* Create tools and have agent to use them
+* You can **deploy** your streamlit app to Streamlit Cloud
+* Next time we will make ChatGPT Plugin
