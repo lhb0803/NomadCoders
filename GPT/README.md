@@ -918,3 +918,22 @@
 * Create tools and have agent to use them
 * You can **deploy** your streamlit app to Streamlit Cloud
 * Next time we will make ChatGPT Plugin
+
+# 16. CrewAI
+## 16.0 Intrudction
+## 16.1 Setup
+## 16.2 Crews, Agents and Tasks
+* Very small API: easy to use!
+* Crew: Team of Agents
+* Agent:
+    - Perform tasks
+    - Make decisions
+    - Communicate with other agents
+    - Agent should be specific
+        - GPT can do ONE thing. If you give multipe objectives, it performs bad.
+        - Use "Divide and Conquer"
+    - Backstory: LLM performs better when it role-plays
+* Task:
+    - Specific assignments completed by agents
+    - Expected Output: you can shape what result should be
+
