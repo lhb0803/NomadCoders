@@ -257,7 +257,7 @@ else:
         for question in response["questions"]:
             st.write(question["question"])
             value = st.radio("Select an option.", [answer["answer"] for answer in question["answers"]], index=None)
-
+            print(question, value)
             if {"answer": value, "correct": True} in question["answers"]:
                 st.success("Correct!")
             elif value is not None:
@@ -266,3 +266,4 @@ else:
                     if answer["correct"]:
                         st.error(f"The answer is {answer['answer']}")
         button = st.form_submit_button()
+        print(value)
